@@ -4,24 +4,47 @@
   <meta charset="UTF-8">
   <title>Liga - Superliga M.A.</title>
   <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fff8f0;
+      color: #333;
+    }
+    h1 {
+      text-align: center;
+      color: #b22222;
+    }
     table {
       border-collapse: collapse;
-      width: 100%;
-      max-width: 800px;
+      width: 90%;
+      margin: 0 auto;
+      font-size: 14px;
     }
     th, td {
-      border: 1px solid black;
-      padding: 5px;
+      border: 1px solid #999;
+      padding: 6px;
       text-align: center;
     }
     th {
-      background-color: #f2f2f2;
+      background-color: #f2dede;
+      color: #800000;
+    }
+    tr:nth-child(even) {
+      background-color: #fff0e0;
+    }
+    .equipo {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .equipo img {
+      width: 20px;
+      height: 20px;
     }
   </style>
 </head>
 <body>
 
-  <h1>Tabla de la Superliga M.A.</h1>
+  <h1>Superliga M.A. - Tabla de Liga</h1>
 
   <table>
     <tr>
@@ -35,18 +58,67 @@
       <th>GC</th>
       <th>DIF</th>
     </tr>
-    <tr><td>1</td><td>Carita F.C.</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
-    <tr><td>2</td><td>Nueva Chicago</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
-    <tr><td>3</td><td>Cuatro Reinos</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
-    <tr><td>4</td><td>General Paz Juniors</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
-    <tr><td>5</td><td>Guris HC</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
-    <tr><td>6</td><td>Imperio F.C.</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
-    <tr><td>7</td><td>AC Colón</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
-    <tr><td>8</td><td>Racing VN</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
-    <tr><td>9</td><td>Real Patapim</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
-    <tr><td>10</td><td>Sacachispas</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
-    <tr><td>11</td><td>Atlético Botella</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
-    <tr><td>12</td><td>Vélez Sarsfield</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+
+    <tr>
+      <td>1</td>
+      <td class="equipo"><img src="escudos/carita.png" alt="Carita F.C."> Carita F.C.</td>
+      <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td class="equipo"><img src="escudos/sinname.png" alt="Club Sin Name"> Club Sin Name</td>
+      <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td class="equipo"><img src="escudos/cuatroreinos.png" alt="Cuatro Reinos"> Cuatro Reinos</td>
+      <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td class="equipo"><img src="escudos/generalpaz.png" alt="General Paz Juniors"> General Paz Juniors</td>
+      <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td class="equipo"><img src="escudos/guris.png" alt="Guris HC"> Guris HC</td>
+      <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td class="equipo"><img src="escudos/imperio.png" alt="Imperio F.C."> Imperio F.C.</td>
+      <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td class="equipo"><img src="escudos/piggybank.png" alt="Piggy Bank"> Piggy Bank</td>
+      <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td class="equipo"><img src="escudos/racingvn.png" alt="Racing VN"> Racing VN</td>
+      <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td class="equipo"><img src="escudos/realpatapim.png" alt="Real Patapim"> Real Patapim</td>
+      <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td class="equipo"><img src="escudos/sacachispas.png" alt="Sacachispas"> Sacachispas</td>
+      <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td class="equipo"><img src="escudos/unionminas.png" alt="Unión Minas"> Unión Minas</td>
+      <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td class="equipo"><img src="escudos/velez.png" alt="Vélez Sarsfield"> Vélez Sarsfield</td>
+      <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+    </tr>
   </table>
 
 </body>
