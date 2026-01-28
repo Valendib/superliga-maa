@@ -1,26 +1,3 @@
-{
-  "liga": "SUPERLIG M.A.",
-  "division": "Primera División",
-  "fechaActual": 1,
-  "equipos": [
-    {"nombre":"RACING VN","pj":0,"pg":0,"pe":0,"pp":0,"gf":0,"gc":0,"pts":0},
-    {"nombre":"ATLÉTICO BOTELLA","pj":0,"pg":0,"pe":0,"pp":0,"gf":0,"gc":0,"pts":0},
-    {"nombre":"CA COLÓN","pj":0,"pg":0,"pe":0,"pp":0,"gf":0,"gc":0,"pts":0},
-    {"nombre":"CARITA F.C.","pj":0,"pg":0,"pe":0,"pp":0,"gf":0,"gc":0,"pts":0},
-    {"nombre":"CUATRO REINOS","pj":0,"pg":0,"pe":0,"pp":0,"gf":0,"gc":0,"pts":0},
-    {"nombre":"IMPERIO F.C.","pj":0,"pg":0,"pe":0,"pp":0,"gf":0,"gc":0,"pts":0},
-    {"nombre":"VELEZ SARSFIELD","pj":0,"pg":0,"pe":0,"pp":0,"gf":0,"gc":0,"pts":0},
-    {"nombre":"NUEVA CHICAGO","pj":0,"pg":0,"pe":0,"pp":0,"gf":0,"gc":0,"pts":0},
-    {"nombre":"GENERAL PAZ JUNIORS","pj":0,"pg":0,"pe":0,"pp":0,"gf":0,"gc":0,"pts":0},
-    {"nombre":"GURIS HC","pj":0,"pg":0,"pe":0,"pp":0,"gf":0,"gc":0,"pts":0},
-    {"nombre":"SACACHISPAS","pj":0,"pg":0,"pe":0,"pp":0,"gf":0,"gc":0,"pts":0},
-    {"nombre":"REAL PATAPIM","pj":0,"pg":0,"pe":0,"pp":0,"gf":0,"gc":0,"pts":0}
-  ],
-  "partidos": [],
-  "goleadores": [],
-  "sanciones": [],
-  "campeones": []
-}
 [
   { "equipo": "Carita F.C.", "promedio": 1.50 },
   { "equipo": "Guris HC", "promedio": 1.32 },
