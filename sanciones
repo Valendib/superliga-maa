@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Sanciones - Superliga M.A.</title>
+  <style>
+    body { font-family: Arial, sans-serif; background-color: #fff8f0; color: #333; text-align: center; }
+    h1 { color: #b22222; margin-top: 20px; }
+    table { border-collapse: collapse; width: 70%; margin: 20px auto; font-size: 14px; }
+    th, td { border: 1px solid #999; padding: 6px; text-align: center; }
+    th { background-color: #f2dede; color: #800000; }
+    tr:nth-child(even) { background-color: #fff0e0; }
+    .equipo { display: flex; align-items: center; gap: 5px; }
+    .equipo img { width: 20px; height: 20px; }
+  </style>
+</head>
+<body>
+
+<h1>Sanciones - Superliga M.A.</h1>
+
+<table>
+  <tr>
+    <th>Pos</th>
+    <th>Jugador</th>
+    <th>Equipo</th>
+    <th>Tarjetas Amarillas</th>
+    <th>Tarjetas Rojas</th>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>Pedro Martínez</td>
+    <td class="equipo"><img src="../promedios/escudos/cuatroreinos.png" alt="Cuatro Reinos"> Cuatro Reinos</td>
+    <td>0</td>
+    <td>0</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>Diego López</td>
+    <td class="equipo"><img src="../promedios/escudos/imperio.png" alt="Imperio F.C."> Imperio F.C.</td>
+    <td>0</td>
+    <td>0</td>
+  </tr>
+  <!-- Agregá más jugadores según necesites -->
+</table>
+
+</body>
+</html>
