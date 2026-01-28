@@ -81,132 +81,30 @@
   <div class="fecha">Fecha: 1</div>
 
 </body>
-<section id="primera-division">
-  <h2>⚽ Primera División - 22 Fechas</h2>
-  <div id="fechas-body"></div>
-</section>
-
-<style>
-  #primera-division {
-    max-width: 900px;
-    margin: 30px auto;
-    padding: 15px;
-  }
-
-  #primera-division h2 {
-    text-align: center;
-    margin-bottom: 25px;
-  }
-
-  .fecha {
-    margin-bottom: 30px;
-  }
-
-  .tabla-fecha {
-    width: 100%;
-    border-collapse: collapse;
-  }
-
-  .tabla-fecha th, .tabla-fecha td {
-    padding: 8px 12px;
-    text-align: center;
-  }
-
-  .tabla-fecha thead {
-    background-color: #333;
-    color: #fff;
-  }
-
-  .tabla-fecha tbody tr:nth-child(even) {
-    background-color: #eee;
-  }
-
-  .logo-equipo {
-    width: 25px;
-    height: 25px;
-    object-fit: contain;
-    vertical-align: middle;
-    margin-right: 5px;
-  }
-
-  td .equipo-con-logo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-</style>
-
 <script>
-  // Array de fechas y partidos
-  const fechas = [
-    {
-      numero: 1,
-      partidos: [
-        { local: "Racing VN", visitante: "Sacachispas", resultado: "3-0", escudoLocal: "racingvn.png", escudoVisitante: "sacachispas" },
-        { local: "Racing", visitante: "Independiente", resultado: "2-1", escudoLocal: "racing", escudoVisitante: "independiente" }
-      ]
-    },
-    {
-      numero: 2,
-      partidos: [
-        { local: "River Plate", visitante: "Racing", resultado: "1-1", escudoLocal: "river", escudoVisitante: "racing" },
-        { local: "Independiente", visitante: "Boca Juniors", resultado: "0-2", escudoLocal: "independiente", escudoVisitante: "boca" }
-      ]
-    }
-    // Repetir hasta Fecha 22
-  ];
-
-  const fechasBody = document.getElementById("fechas-body");
-
-  fechas.forEach(f => {
-    const div = document.createElement("div");
-    div.classList.add("fecha");
-    div.id = `fecha-${f.numero}`;
-
-    const h3 = document.createElement("h3");
-    h3.textContent = `Fecha ${f.numero}`;
-    div.appendChild(h3);
-
-    const table = document.createElement("table");
-    table.classList.add("tabla-fecha");
-
-    const thead = document.createElement("thead");
-    thead.innerHTML = `
-      <tr>
-        <th>Local</th>
-        <th>Resultado</th>
-        <th>Visitante</th>
-      </tr>
-    `;
-    table.appendChild(thead);
-
-    const tbody = document.createElement("tbody");
-
-    f.partidos.forEach(p => {
-      const tr = document.createElement("tr");
-
-      // Local
-      const tdLocal = document.createElement("td");
-      tdLocal.classList.add("equipo-con-logo");
-      tdLocal.innerHTML = `<img src="../escudos/${p.escudoLocal}.png" class="logo-equipo" alt="${p.local}"> ${p.local}`;
-      tr.appendChild(tdLocal);
-
-      // Resultado
-      const tdResultado = document.createElement("td");
-      tdResultado.textContent = p.resultado;
-      tr.appendChild(tdResultado);
-
-      // Visitante
-      const tdVisitante = document.createElement("td");
-      tdVisitante.classList.add("equipo-con-logo");
-      tdVisitante.innerHTML = `<img src="../escudos/${p.escudoVisitante}.png" class="logo-equipo" alt="${p.visitante}"> ${p.visitante}`;
-      tr.appendChild(tdVisitante);
-
-      tbody.appendChild(tr);
-    });
-
-    table.appendChild(tbody);
-    div.appendChild(table);
-    fechasBody.appendChild(div);
-  });
+const fechas = [
+  {
+    numero: 1,
+    partidos: [
+      { local: "Boca Juniors", resultado: "0-0", visitante: "River Plate", escudoLocal: "boca", escudoVisitante: "river" },
+      { local: "Racing", resultado: "2-1", visitante: "Independiente", escudoLocal: "racing", escudoVisitante: "independiente" },
+      { local: "San Lorenzo", resultado: "1-1", visitante: "Huracán", escudoLocal: "san-lorenzo", escudoVisitante: "huracan" },
+      { local: "Gimnasia", resultado: "3-0", visitante: "Talleres", escudoLocal: "gimnasia", escudoVisitante: "talleres" },
+      { local: "Newells", resultado: "2-2", visitante: "Colón", escudoLocal: "newells", escudoVisitante: "colon" },
+      { local: "Arsenal", resultado: "1-0", visitante: "Godoy Cruz", escudoLocal: "arsenal", escudoVisitante: "godoy-cruz" }
+    ]
+  },
+  {
+    numero: 2,
+    partidos: [
+      { local: "River Plate", resultado: "1-2", visitante: "Boca Juniors", escudoLocal: "river", escudoVisitante: "boca" },
+      { local: "Independiente", resultado: "0-0", visitante: "Racing", escudoLocal: "independiente", escudoVisitante: "racing" },
+      { local: "Huracán", resultado: "1-3", visitante: "San Lorenzo", escudoLocal: "huracan", escudoVisitante: "san-lorenzo" },
+      { local: "Talleres", resultado: "2-2", visitante: "Gimnasia", escudoLocal: "talleres", escudoVisitante: "gimnasia" },
+      { local: "Colón", resultado: "0-1", visitante: "Newells", escudoLocal: "colon", escudoVisitante: "newells" },
+      { local: "Godoy Cruz", resultado: "2-0", visitante: "Arsenal", escudoLocal: "godoy-cruz", escudoVisitante: "arsenal" }
+    ]
+  }
+  // Repetir hasta fecha 22
+];
 </script>
