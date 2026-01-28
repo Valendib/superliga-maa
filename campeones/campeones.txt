@@ -11,7 +11,7 @@
       <tr class="pretemporada">
         <td>Copa de Pretemporada</td>
         <td>
-          <img src="logos/generalpaz.png" alt="General Paz Juniors" class="logo-club">
+          <img src="escudos/generalpaz.png" alt="General Paz Juniors" class="logo-club">
           General Paz Juniors
         </td>
       </tr>
@@ -89,4 +89,5 @@
   .libertadores { color: #856404; font-weight: bold; }
   .sudamericana { color: #383d41; font-weight: bold; }
 </style>
+
 
