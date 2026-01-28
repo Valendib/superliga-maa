@@ -1,91 +1,119 @@
 <section id="campeones">
   <h2>🏆 Campeones</h2>
-  <table class="tabla-campeones">
-    <thead>
-      <tr>
-        <th>Campeonato</th>
-        <th>Campeón</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr class="pretemporada">
-        <td>Copa de Pretemporada</td>
-        <td>
-          <img src="logos/general-paz-juniors.png" alt="General Paz Juniors" class="logo-club">
-          General Paz Juniors
-        </td>
-      </tr>
-      <tr class="liga">
-        <td>Liga (Superlig)</td>
-        <td>—</td>
-      </tr>
-      <tr class="copa-nacional">
-        <td>Copa Nacional</td>
-        <td>—</td>
-      </tr>
-      <tr class="ascenso">
-        <td>2da División (Liga del Ascenso)</td>
-        <td>—</td>
-      </tr>
-      <tr class="libertadores">
-        <td>Copa Libertadores</td>
-        <td>—</td>
-      </tr>
-      <tr class="sudamericana">
-        <td>Copa Sudamericana</td>
-        <td>—</td>
-      </tr>
-    </tbody>
-  </table>
+  <div class="campeones-grid">
+    <!-- Copa de Pretemporada -->
+    <div class="card pretemporada">
+      <img class="copa-logo" src="copas/pretemporada.png" alt="Copa de Pretemporada">
+      <div class="card-title">Copa de Pretemporada</div>
+      <div class="card-club">
+        <img src="logos/general-paz-juniors.png" alt="General Paz Juniors">
+        <span>General Paz Juniors</span>
+      </div>
+    </div>
+
+    <!-- Liga (Superlig) -->
+    <div class="card liga">
+      <img class="copa-logo" src="copas/liga.png" alt="Liga Superlig">
+      <div class="card-title">Liga (Superlig)</div>
+      <div class="card-club">—</div>
+    </div>
+
+    <!-- Copa Nacional -->
+    <div class="card copa-nacional">
+      <img class="copa-logo" src="copas/copa-nacional.png" alt="Copa Nacional">
+      <div class="card-title">Copa Nacional</div>
+      <div class="card-club">—</div>
+    </div>
+
+    <!-- 2da División -->
+    <div class="card ascenso">
+      <img class="copa-logo" src="copas/ascenso.png" alt="2da División">
+      <div class="card-title">2da División</div>
+      <div class="card-club">—</div>
+    </div>
+
+    <!-- Copa Libertadores -->
+    <div class="card libertadores">
+      <img class="copa-logo" src="copas/libertadores.png" alt="Copa Libertadores">
+      <div class="card-title">Copa Libertadores</div>
+      <div class="card-club">—</div>
+    </div>
+
+    <!-- Copa Sudamericana -->
+    <div class="card sudamericana">
+      <img class="copa-logo" src="copas/sudamericana.png" alt="Copa Sudamericana">
+      <div class="card-title">Copa Sudamericana</div>
+      <div class="card-club">—</div>
+    </div>
+  </div>
 </section>
 
 <style>
   #campeones {
-    padding: 20px;
-    max-width: 800px;
-    margin: 30px auto;
-    background-color: #f9f9f9;
-    border-radius: 10px;
+    padding: 40px 20px;
+    background-color: #f0f2f5;
+    border-radius: 12px;
+    max-width: 1100px;
+    margin: 40px auto;
   }
 
   #campeones h2 {
     text-align: center;
-    font-size: 1.8rem;
-    margin-bottom: 20px;
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+    color: #222;
   }
 
-  .tabla-campeones {
-    width: 100%;
-    border-collapse: collapse;
+  .campeones-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
   }
 
-  .tabla-campeones th, .tabla-campeones td {
-    padding: 10px 12px;
-    text-align: left;
+  .card {
+    background-color: white;
+    border-radius: 14px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
   }
 
-  .tabla-campeones thead {
-    background-color: #333;
-    color: #fff;
+  .card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 22px rgba(0,0,0,0.15);
   }
 
-  .tabla-campeones tbody tr:nth-child(even) {
-    background-color: #eee;
-  }
-
-  .logo-club {
-    width: 30px;
-    height: 30px;
+  .copa-logo {
+    width: 60px;
+    height: 60px;
     object-fit: contain;
-    vertical-align: middle;
-    margin-right: 8px;
+    margin-bottom: 10px;
+  }
+
+  .card-title {
+    font-weight: bold;
+    margin-bottom: 12px;
+    font-size: 1.1rem;
+  }
+
+  .card-club {
+    font-size: 0.95rem;
+  }
+
+  .card-club img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    display: block;
+    margin: 6px auto 4px;
   }
 
   /* Colores por tipo de campeonato */
-  .pretemporada { color: #a55f00; font-weight: bold; }
-  .liga { color: #004085; font-weight: bold; }
-  .copa-nacional { color: #155724; font-weight: bold; }
-  .ascenso { color: #721c24; font-weight: bold; }
-  .libertadores { color: #856404; font-weight: bold; }
-  .sudamericana { color: #383d41; font-weight: bold; }
+  .pretemporada { background: #fff0d4; color: #a55f00; }
+  .liga { background: #cce5ff; color: #004085; }
+  .copa-nacional { background: #d4edda; color: #155724; }
+  .ascenso { background: #f8d7da; color: #721c24; }
+  .libertadores { background: #fff3cd; color: #856404; }
+  .sudamericana { background: #e2e3e5; color: #383d41; }
 </style>
