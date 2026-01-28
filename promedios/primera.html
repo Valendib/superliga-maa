@@ -82,3 +82,110 @@
 
 </body>
 </html>
+<section id="primera-division">
+  <h2>⚽ Primera División - 22 Fechas</h2>
+  <div id="fechas-body">
+    <!-- Las fechas se generan automáticamente -->
+  </div>
+</section>
+
+<style>
+  #primera-division {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 15px;
+  }
+
+  #primera-division h2 {
+    text-align: center;
+    margin-bottom: 25px;
+  }
+
+  .fecha {
+    margin-bottom: 30px;
+  }
+
+  .tabla-fecha {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  .tabla-fecha th, .tabla-fecha td {
+    padding: 8px 12px;
+    text-align: center;
+  }
+
+  .tabla-fecha thead {
+    background-color: #333;
+    color: #fff;
+  }
+
+  .tabla-fecha tbody tr:nth-child(even) {
+    background-color: #eee;
+  }
+</style>
+
+<script>
+  // Array con las 22 fechas y sus partidos
+  const fechas = [
+    {
+      numero: 1,
+      partidos: [
+        { local: "Boca Juniors", resultado: "0-0", visitante: "River Plate" },
+        { local: "Racing", resultado: "2-1", visitante: "Independiente" }
+        // Agregá todos los partidos de la Fecha 1
+      ]
+    },
+    {
+      numero: 2,
+      partidos: [
+        { local: "River Plate", resultado: "1-1", visitante: "Racing" },
+        { local: "Independiente", resultado: "0-2", visitante: "Boca Juniors" }
+        // Agregá todos los partidos de la Fecha 2
+      ]
+    }
+    // Repetí hasta la Fecha 22
+  ];
+
+  const fechasBody = document.getElementById("fechas-body");
+
+  // Función para generar las tablas automáticamente
+  fechas.forEach(f => {
+    const div = document.createElement("div");
+    div.classList.add("fecha");
+    div.id = `fecha-${f.numero}`;
+
+    const h3 = document.createElement("h3");
+    h3.textContent = `Fecha ${f.numero}`;
+    div.appendChild(h3);
+
+    const table = document.createElement("table");
+    table.classList.add("tabla-fecha");
+
+    const thead = document.createElement("thead");
+    thead.innerHTML = `
+      <tr>
+        <th>Local</th>
+        <th>Resultado</th>
+        <th>Visitante</th>
+      </tr>
+    `;
+    table.appendChild(thead);
+
+    const tbody = document.createElement("tbody");
+
+    f.partidos.forEach(p => {
+      const tr = document.createElement("tr");
+      tr.innerHTML = `
+        <td>${p.local}</td>
+        <td>${p.resultado}</td>
+        <td>${p.visitante}</td>
+      `;
+      tbody.appendChild(tr);
+    });
+
+    table.appendChild(tbody);
+    div.appendChild(table);
+    fechasBody.appendChild(div);
+  });
+</script>
