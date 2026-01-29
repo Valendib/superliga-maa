@@ -1,48 +1,88 @@
-<nav class="menu-fachero">
-  <ul>
-    <li><a href="1ra/index.html">Primera</a></li>
-    <li><a href="2da/index.html">Segunda</a></li>
-    <li><a href="campeones/index.html">Campeones</a></li>
-    <li><a href="sanciones/index.html">Sanciones</a></li>
-    <li><a href="goleadores/index.html">Goleadores</a></li>
-  </ul>
-</nav>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>SUPERLIG M.A.</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #e5e5e5;
+            color: #000;
+        }
 
-<style>
-.menu-fachero {
-  background:#1B5E20;
-  box-shadow:0 4px 8px rgba(0,0,0,0.2);
-}
+        /* CONTENEDOR GENERAL */
+        .container {
+            width: 900px;
+            margin: 20px auto;
+            background-color: #ffffff;
+            border: 1px solid #999;
+        }
 
-.menu-fachero ul {
-  list-style:none;
-  display:flex;
-  justify-content:center;
-  margin:0;
-  padding:0;
-  flex-wrap:wrap;
-}
+        /* HEADER */
+        .header {
+            background-color: #d9d9d9;
+            padding: 10px;
+            font-size: 22px;
+            font-weight: bold;
+            border-bottom: 1px solid #999;
+        }
 
-.menu-fachero ul li {
-  margin:0 12px;
-}
+        /* MENU PRINCIPAL */
+        .menu {
+            padding: 20px;
+        }
 
-.menu-fachero ul li a {
-  color:white;
-  text-decoration:none;
-  font-weight:600;
-  padding:10px 18px;
-  display:block;
-  border-radius:8px;
-  transition:0.3s;
-}
+        .menu h2 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 5px;
+        }
 
-.menu-fachero ul li a:hover {
-  background:#2E7D32;
-  transform:scale(1.05);
-}
+        .menu a {
+            display: block;
+            text-decoration: none;
+            color: #003399;
+            font-size: 16px;
+            margin: 8px 0;
+        }
 
-.menu-fachero ul li a.active {
-  background:#4CAF50;
-  box-shadow:0 2px 6px rgba(0,0,0,0.3);
-}
+        .menu a:hover {
+            text-decoration: underline;
+        }
+
+        /* FOOTER */
+        .footer {
+            background-color: #f2f2f2;
+            text-align: center;
+            font-size: 12px;
+            padding: 8px;
+            border-top: 1px solid #999;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="header">
+        SUPERLIG M.A.
+    </div>
+
+    <div class="menu">
+        <h2>CATEGORÍAS</h2>
+
+        <a href="superlig/index.html">▶ SUPERLIG M.A.</a>
+        <a href="ascenso/index.html">▶ LIGA DEL ASCENSO</a>
+    </div>
+
+    <div class="footer">
+        SUPERLIG M.A. – Estadísticas y Competencias
+    </div>
+
+</div>
+
+</body>
+</html>
