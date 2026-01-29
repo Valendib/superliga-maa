@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Sanciones – Superlig M.A.</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #e6e6e6;
+      color: #000;
+    }
+
+    /* Header */
+    .header {
+      background-color: #111;
+      color: #fff;
+      padding: 10px 15px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    /* Contenedor */
+    .container {
+      max-width: 900px;
+      margin: 20px auto;
+      background-color: #fff;
+      border: 1px solid #ccc;
+    }
+
+    .titulo {
+      background-color: #f2f2f2;
+      padding: 10px;
+      font-weight: bold;
+      border-bottom: 1px solid #ccc;
+    }
+
+    /* Tabla */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+    }
+
+    th {
+      background-color: #ddd;
+      padding: 8px;
+      border: 1px solid #bbb;
+      text-align: center;
+    }
+
+    td {
+      padding: 7px;
+      border: 1px solid #ccc;
+      text-align: center;
+    }
+
+    td.jugador {
+      text-align: left;
+      font-weight: bold;
+    }
+
+    td.detalle {
+      text-align: left;
+      font-size: 13px;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      body {
+        font-size: 13px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    SUPERLIG M.A. – SANCIONES
+  </div>
+
+  <div class="container">
+    <div class="titulo">
+      Jugadores Suspendidos
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Jugador</th>
+          <th>Club</th>
+          <th>Motivo</th>
+          <th>Fechas</th>
+          <th>Fecha sanción</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="jugador">Jugador 1</td>
+          <td>Club A</td>
+          <td class="detalle">Expulsión directa</td>
+          <td>2</td>
+          <td>Fecha 5</td>
+        </tr>
+        <tr>
+          <td class="jugador">Jugador 2</td>
+          <td>Club B</td>
+          <td class="detalle">Acumulación de amarillas</td>
+          <td>1</td>
+          <td>Fecha 6</td>
+        </tr>
+        <tr>
+          <td class="jugador">Jugador 3</td>
+          <td>Club C</td>
+          <td class="detalle">Conducta antideportiva</td>
+          <td>3</td>
+          <td>Fecha 6</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</body>
+</html>
