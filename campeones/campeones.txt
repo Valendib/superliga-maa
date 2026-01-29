@@ -1,198 +1,47 @@
-<!-- HISTORIAL DE CAMPEONES -->
-<section class="historial-campeones">
+<!-- ========================== MENÚ CAMPEONES ========================== -->
+<section id="campeones" class="section visible">
   <h2>🏆 Historial de Campeones</h2>
 
-  <!-- SUPERLIGA / PRIMERA DIVISIÓN -->
-  <div class="torneo">
-    <h3>Superliga / Primera División</h3>
-    <table class="tabla-campeones">
-      <thead>
-        <tr>
-          <th>Temporada</th>
-          <th>Campeón</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>2025 Apertura</td>
-          <td><img src="img/platense.png" alt="Platense" class="escudo"> Platense</td>
-        </tr>
-        <tr>
-          <td>2025 Clausura</td>
-          <td><img src="img/estudiantes_lp.png" alt="Estudiantes LP" class="escudo"> Estudiantes (LP)</td>
-        </tr>
-        <tr>
-          <td>2024</td>
-          <td><img src="img/velez.png" alt="Vélez Sarsfield" class="escudo"> Vélez Sarsfield</td>
-        </tr>
-        <tr>
-          <td>2023</td>
-          <td><img src="img/river.png" alt="River Plate" class="escudo"> River Plate</td>
-        </tr>
-        <tr>
-          <td>2022</td>
-          <td><img src="img/boca.png" alt="Boca Juniors" class="escudo"> Boca Juniors</td>
-        </tr>
-      </tbody>
-    </table>
+  <!-- BOTONES DE TORNEOS -->
+  <div class="torneos-btns">
+    <button class="torneo-btn active" data-torneo="superlig">SUPERLIG</button>
+    <button class="torneo-btn" data-torneo="liga-ascenso">LIGA DEL ASCENSO</button>
+    <button class="torneo-btn" data-torneo="pretemporada">COPA DE PRETEMPORADA</button>
+    <button class="torneo-btn" data-torneo="copa-nacional">COPA NACIONAL</button>
+    <button class="torneo-btn" data-torneo="libertadores">COPA LIBERTADORES</button>
+    <button class="torneo-btn" data-torneo="sudamericana">COPA SUDAMÉRICANA</button>
   </div>
 
-  <!-- COPA NACIONAL -->
-  <div class="torneo">
-    <h3>Copa Nacional</h3>
-    <table class="tabla-campeones">
-      <thead>
-        <tr>
-          <th>Edición</th>
-          <th>Campeón</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>2025</td>
-          <td><img src="img/indra.png" alt="Independiente Rivadavia" class="escudo"> Independiente Rivadavia</td>
-        </tr>
-        <tr>
-          <td>2024</td>
-          <td><img src="img/centralcordoba.png" alt="Central Córdoba SdE" class="escudo"> Central Córdoba (SdE)</td>
-        </tr>
-        <tr>
-          <td>2023</td>
-          <td><img src="img/estudiantes_lp.png" alt="Estudiantes LP" class="escudo"> Estudiantes (LP)</td>
-        </tr>
-        <tr>
-          <td>2022</td>
-          <td><img src="img/patronato.png" alt="Patronato" class="escudo"> Patronato</td>
-        </tr>
-        <tr>
-          <td>2020</td>
-          <td><img src="img/boca.png" alt="Boca Juniors" class="escudo"> Boca Juniors</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
+  <!-- LISTAS DE CAMPEONES -->
+  <div class="torneo-listas">
+    <!-- SUPERLIG -->
+    <ul id="superlig" class="torneo-list visible">
+      <li>2025 Apertura - </li>
+    </ul>
 
-  <!-- COPA DE PRETEMPORADA -->
-  <div class="torneo">
-    <h3>Copa de Pretemporada</h3>
-    <table class="tabla-campeones">
-      <thead>
-        <tr>
-          <th>Edición</th>
-          <th>Campeón</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>2025</td>
-          <td><img src="img/independiente.png" alt="Independiente" class="escudo"> Independiente</td>
-        </tr>
-        <tr>
-          <td>2024</td>
-          <td><img src="img/racing.png" alt="Racing Club" class="escudo"> Racing Club</td>
-        </tr>
-        <tr>
-          <td>2023</td>
-          <td><img src="img/velez.png" alt="Vélez Sarsfield" class="escudo"> Vélez Sarsfield</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
+    <!-- LIGA DEL ASCENSO -->
+    <ul id="liga-ascenso" class="torneo-list">
+      <li>2025 - </li>
+    </ul>
 
-  <!-- LIGA DEL ASCENSO / PRIMERA NACIONAL -->
-  <div class="torneo">
-    <h3>Liga del Ascenso / Primera Nacional</h3>
-    <table class="tabla-campeones">
-      <thead>
-        <tr>
-          <th>Temporada</th>
-          <th>Campeón / Ascendido</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>2025</td>
-          <td><img src="img/estudiantes_rc.png" alt="Estudiantes RC" class="escudo"> Estudiantes RC</td>
-        </tr>
-        <tr>
-          <td>2018/19</td>
-          <td><img src="img/arsenal.png" alt="Arsenal" class="escudo"> Arsenal de Sarandí</td>
-        </tr>
-        <tr>
-          <td>2017/18</td>
-          <td><img src="img/aldosivi.png" alt="Aldosivi" class="escudo"> Aldosivi</td>
-        </tr>
-        <tr>
-          <td>2016/17</td>
-          <td><img src="img/argentinos.png" alt="Argentinos Juniors" class="escudo"> Argentinos Juniors</td>
-        </tr>
-        <tr>
-          <td>2013/14</td>
-          <td><img src="img/banfield.png" alt="Banfield" class="escudo"> Banfield</td>
-        </tr>
-      </tbody>
-    </table>
+    <!-- COPA DE PRETEMPORADA -->
+    <ul id="pretemporada" class="torneo-list">
+      <li>2025 - General Paz Juniors</li>
+    </ul>
+
+    <!-- COPA NACIONAL -->
+    <ul id="copa-nacional" class="torneo-list">
+      <li>2025 - </li>
+   </ul>
+
+    <!-- COPA LIBERTADORES -->
+    <ul id="libertadores" class="torneo-list">
+      <li>2025 - </li>
+    </ul>
+
+    <!-- COPA SUDAMÉRICANA -->
+    <ul id="sudamericana" class="torneo-list">
+      <li>2025 - </li>
+    </ul>
   </div>
 </section>
-/* ESTILO PARA HISTORIAL DE CAMPEONES */
-.historial-campeones {
-  font-family: 'Arial', sans-serif;
-  max-width: 950px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-.historial-campeones h2 {
-  text-align: center;
-  color: #2E8B57;
-  margin-bottom: 20px;
-  font-size: 28px;
-}
-
-.torneo {
-  margin-bottom: 35px;
-}
-
-.torneo h3 {
-  background-color: #f0f0f0;
-  padding: 10px 15px;
-  border-left: 5px solid #2E8B57;
-  color: #333;
-  font-size: 22px;
-}
-
-.tabla-campeones {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 10px;
-}
-
-.tabla-campeones th,
-.tabla-campeones td {
-  border: 1px solid #ccc;
-  padding: 8px 12px;
-  text-align: left;
-  vertical-align: middle;
-}
-
-.tabla-campeones th {
-  background-color: #2E8B57;
-  color: #fff;
-}
-
-.tabla-campeones tr:nth-child(even) {
-  background-color: #f9f9f9;
-}
-
-.tabla-campeones tr:hover {
-  background-color: #e0f2f1;
-  transition: 0.3s;
-}
-
-/* ESCUDOS */
-.tabla-campeones .escudo {
-  width: 30px;
-  height: 30px;
-  vertical-align: middle;
-  margin-right: 8px;
-}
