@@ -1,157 +1,198 @@
-<section id="campeones">
-  <h2>🏆 Campeones</h2>
-  <table class="tabla-campeones">
-    <thead>
-      <tr>
-        <th>Campeonato</th>
-        <th>Campeón</th>
-      </tr>
-    </thead>
-    <tbody id="campeones-body">
-      <!-- Se genera automáticamente -->
-    </tbody>
-  </table>
+<!-- HISTORIAL DE CAMPEONES -->
+<section class="historial-campeones">
+  <h2>🏆 Historial de Campeones</h2>
+
+  <!-- SUPERLIGA / PRIMERA DIVISIÓN -->
+  <div class="torneo">
+    <h3>Superliga / Primera División</h3>
+    <table class="tabla-campeones">
+      <thead>
+        <tr>
+          <th>Temporada</th>
+          <th>Campeón</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>2025 Apertura</td>
+          <td><img src="img/platense.png" alt="Platense" class="escudo"> Platense</td>
+        </tr>
+        <tr>
+          <td>2025 Clausura</td>
+          <td><img src="img/estudiantes_lp.png" alt="Estudiantes LP" class="escudo"> Estudiantes (LP)</td>
+        </tr>
+        <tr>
+          <td>2024</td>
+          <td><img src="img/velez.png" alt="Vélez Sarsfield" class="escudo"> Vélez Sarsfield</td>
+        </tr>
+        <tr>
+          <td>2023</td>
+          <td><img src="img/river.png" alt="River Plate" class="escudo"> River Plate</td>
+        </tr>
+        <tr>
+          <td>2022</td>
+          <td><img src="img/boca.png" alt="Boca Juniors" class="escudo"> Boca Juniors</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- COPA NACIONAL -->
+  <div class="torneo">
+    <h3>Copa Nacional</h3>
+    <table class="tabla-campeones">
+      <thead>
+        <tr>
+          <th>Edición</th>
+          <th>Campeón</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>2025</td>
+          <td><img src="img/indra.png" alt="Independiente Rivadavia" class="escudo"> Independiente Rivadavia</td>
+        </tr>
+        <tr>
+          <td>2024</td>
+          <td><img src="img/centralcordoba.png" alt="Central Córdoba SdE" class="escudo"> Central Córdoba (SdE)</td>
+        </tr>
+        <tr>
+          <td>2023</td>
+          <td><img src="img/estudiantes_lp.png" alt="Estudiantes LP" class="escudo"> Estudiantes (LP)</td>
+        </tr>
+        <tr>
+          <td>2022</td>
+          <td><img src="img/patronato.png" alt="Patronato" class="escudo"> Patronato</td>
+        </tr>
+        <tr>
+          <td>2020</td>
+          <td><img src="img/boca.png" alt="Boca Juniors" class="escudo"> Boca Juniors</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- COPA DE PRETEMPORADA -->
+  <div class="torneo">
+    <h3>Copa de Pretemporada</h3>
+    <table class="tabla-campeones">
+      <thead>
+        <tr>
+          <th>Edición</th>
+          <th>Campeón</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>2025</td>
+          <td><img src="img/independiente.png" alt="Independiente" class="escudo"> Independiente</td>
+        </tr>
+        <tr>
+          <td>2024</td>
+          <td><img src="img/racing.png" alt="Racing Club" class="escudo"> Racing Club</td>
+        </tr>
+        <tr>
+          <td>2023</td>
+          <td><img src="img/velez.png" alt="Vélez Sarsfield" class="escudo"> Vélez Sarsfield</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- LIGA DEL ASCENSO / PRIMERA NACIONAL -->
+  <div class="torneo">
+    <h3>Liga del Ascenso / Primera Nacional</h3>
+    <table class="tabla-campeones">
+      <thead>
+        <tr>
+          <th>Temporada</th>
+          <th>Campeón / Ascendido</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>2025</td>
+          <td><img src="img/estudiantes_rc.png" alt="Estudiantes RC" class="escudo"> Estudiantes RC</td>
+        </tr>
+        <tr>
+          <td>2018/19</td>
+          <td><img src="img/arsenal.png" alt="Arsenal" class="escudo"> Arsenal de Sarandí</td>
+        </tr>
+        <tr>
+          <td>2017/18</td>
+          <td><img src="img/aldosivi.png" alt="Aldosivi" class="escudo"> Aldosivi</td>
+        </tr>
+        <tr>
+          <td>2016/17</td>
+          <td><img src="img/argentinos.png" alt="Argentinos Juniors" class="escudo"> Argentinos Juniors</td>
+        </tr>
+        <tr>
+          <td>2013/14</td>
+          <td><img src="img/banfield.png" alt="Banfield" class="escudo"> Banfield</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </section>
+/* ESTILO PARA HISTORIAL DE CAMPEONES */
+.historial-campeones {
+  font-family: 'Arial', sans-serif;
+  max-width: 950px;
+  margin: 0 auto;
+  padding: 20px;
+}
 
-<section id="admin">
-  <h3>⚙️ Admin Campeones</h3>
-  <label for="select-campeonato">Campeonato:</label>
-  <select id="select-campeonato">
-    <option value="pretemporada">Copa de Pretemporada</option>
-    <option value="liga">Liga (Superlig)</option>
-    <option value="copa-nacional">Copa Nacional</option>
-    <option value="ascenso">2da División (Liga del Ascenso)</option>
-    <option value="libertadores">Copa Libertadores</option>
-    <option value="sudamericana">Copa Sudamericana</option>
-  </select>
-  <br><br>
-  <input type="text" id="input-club" placeholder="Archivo del escudo (ej: general-paz-juniors)">
-  <input type="text" id="input-nombre" placeholder="Nombre completo del club">
-  <button id="guardar">Guardar</button>
-</section>
+.historial-campeones h2 {
+  text-align: center;
+  color: #2E8B57;
+  margin-bottom: 20px;
+  font-size: 28px;
+}
 
-<style>
-  #campeones, #admin {
-    padding: 20px;
-    max-width: 800px;
-    margin: 30px auto;
-    background-color: #f9f9f9;
-    border-radius: 10px;
-  }
+.torneo {
+  margin-bottom: 35px;
+}
 
-  #campeones h2, #admin h3 {
-    text-align: center;
-    margin-bottom: 20px;
-  }
+.torneo h3 {
+  background-color: #f0f0f0;
+  padding: 10px 15px;
+  border-left: 5px solid #2E8B57;
+  color: #333;
+  font-size: 22px;
+}
 
-  .tabla-campeones {
-    width: 100%;
-    border-collapse: collapse;
-  }
+.tabla-campeones {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
 
-  .tabla-campeones th, .tabla-campeones td {
-    padding: 10px 12px;
-    text-align: left;
-  }
+.tabla-campeones th,
+.tabla-campeones td {
+  border: 1px solid #ccc;
+  padding: 8px 12px;
+  text-align: left;
+  vertical-align: middle;
+}
 
-  .tabla-campeones thead {
-    background-color: #333;
-    color: #fff;
-  }
+.tabla-campeones th {
+  background-color: #2E8B57;
+  color: #fff;
+}
 
-  .tabla-campeones tbody tr:nth-child(even) {
-    background-color: #eee;
-  }
+.tabla-campeones tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
 
-  .logo-club {
-    width: 30px;
-    height: 30px;
-    object-fit: contain;
-    vertical-align: middle;
-    margin-right: 8px;
-  }
+.tabla-campeones tr:hover {
+  background-color: #e0f2f1;
+  transition: 0.3s;
+}
 
-  /* Colores por tipo de campeonato */
-  .pretemporada { color: #a55f00; font-weight: bold; }
-  .liga { color: #004085; font-weight: bold; }
-  .copa-nacional { color: #155724; font-weight: bold; }
-  .ascenso { color: #721c24; font-weight: bold; }
-  .libertadores { color: #856404; font-weight: bold; }
-  .sudamericana { color: #383d41; font-weight: bold; }
-
-  #admin input, #admin select, #admin button {
-    margin: 5px 0;
-    padding: 6px 10px;
-    font-size: 1rem;
-  }
-
-  #guardar {
-    cursor: pointer;
-  }
-</style>
-
-<script>
-  // Array de campeonatos (editable desde admin)
-  const campeonatos = [
-    { tipo: 'pretemporada', nombre: 'Copa de Pretemporada', club: 'generalpaz', nombreCompleto: 'General Paz Juniors' },
-    { tipo: 'liga', nombre: 'Liga (Superlig)', club: '', nombreCompleto: '' },
-    { tipo: 'copa-nacional', nombre: 'Copa Nacional', club: '', nombreCompleto: '' },
-    { tipo: 'ascenso', nombre: '2da División (Liga del Ascenso)', club: '', nombreCompleto: '' },
-    { tipo: 'libertadores', nombre: 'Copa Libertadores', club: '', nombreCompleto: '' },
-    { tipo: 'sudamericana', nombre: 'Copa Sudamericana', club: '', nombreCompleto: '' }
-  ];
-
-  const tbody = document.getElementById('campeones-body');
-
-  // Función para renderizar la tabla
-  function renderTabla() {
-    tbody.innerHTML = '';
-    campeonatos.forEach(c => {
-      const tr = document.createElement('tr');
-      tr.classList.add(c.tipo);
-
-      const tdCampeonato = document.createElement('td');
-      tdCampeonato.textContent = c.nombre;
-
-      const tdClub = document.createElement('td');
-      if(c.club) {
-        const img = document.createElement('img');
-        img.src = `../escudos/${c.club}.png`;
-        img.alt = c.nombreCompleto;
-        img.classList.add('logo-club');
-        tdClub.appendChild(img);
-        tdClub.appendChild(document.createTextNode(' ' + c.nombreCompleto));
-      } else {
-        tdClub.textContent = '—';
-      }
-
-      tr.appendChild(tdCampeonato);
-      tr.appendChild(tdClub);
-      tbody.appendChild(tr);
-    });
-  }
-
-  renderTabla(); // inicializa la tabla
-
-  // Admin
-  const select = document.getElementById('select-campeonato');
-  const inputClub = document.getElementById('input-club');
-  const inputNombre = document.getElementById('input-nombre');
-  const btn = document.getElementById('guardar');
-
-  btn.addEventListener('click', () => {
-    const tipo = select.value;
-    const club = inputClub.value.trim();
-    const nombreCompleto = inputNombre.value.trim();
-
-    const campeonato = campeonatos.find(c => c.tipo === tipo);
-    if(campeonato) {
-      campeonato.club = club;
-      campeonato.nombreCompleto = nombreCompleto;
-      renderTabla(); // actualiza la tabla al instante
-      alert('✅ Campeón actualizado!');
-      inputClub.value = '';
-      inputNombre.value = '';
-    }
-  });
-</script>
+/* ESCUDOS */
+.tabla-campeones .escudo {
+  width: 30px;
+  height: 30px;
+  vertical-align: middle;
+  margin-right: 8px;
+}
