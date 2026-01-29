@@ -1,47 +1,9 @@
-<!-- ========================== MENÚ CAMPEONES ========================== -->
-<section id="campeones" class="section visible">
-  <h2>🏆 Historial de Campeones</h2>
-
-  <!-- BOTONES DE TORNEOS -->
-  <div class="torneos-btns">
-    <button class="torneo-btn active" data-torneo="superlig">SUPERLIG</button>
-    <button class="torneo-btn" data-torneo="liga-ascenso">LIGA DEL ASCENSO</button>
-    <button class="torneo-btn" data-torneo="pretemporada">COPA DE PRETEMPORADA</button>
-    <button class="torneo-btn" data-torneo="copa-nacional">COPA NACIONAL</button>
-    <button class="torneo-btn" data-torneo="libertadores">COPA LIBERTADORES</button>
-    <button class="torneo-btn" data-torneo="sudamericana">COPA SUDAMÉRICANA</button>
-  </div>
-
-  <!-- LISTAS DE CAMPEONES -->
-  <div class="torneo-listas">
-    <!-- SUPERLIG -->
-    <ul id="superlig" class="torneo-list visible">
-      <li>2025 Apertura - </li>
-    </ul>
-
-    <!-- LIGA DEL ASCENSO -->
-    <ul id="liga-ascenso" class="torneo-list">
-      <li>2025 - </li>
-    </ul>
-
-    <!-- COPA DE PRETEMPORADA -->
-    <ul id="pretemporada" class="torneo-list">
-      <li>2025 - General Paz Juniors</li>
-    </ul>
-
-    <!-- COPA NACIONAL -->
-    <ul id="copa-nacional" class="torneo-list">
-      <li>2025 - </li>
-   </ul>
-
-    <!-- COPA LIBERTADORES -->
-    <ul id="libertadores" class="torneo-list">
-      <li>2025 - </li>
-    </ul>
-
-    <!-- COPA SUDAMÉRICANA -->
-    <ul id="sudamericana" class="torneo-list">
-      <li>2025 - </li>
-    </ul>
-  </div>
-</section>
+/* ========================== ESTILO ========================== */
+.torneos-btns { display:flex; flex-wrap:wrap; gap:10px; margin-bottom:20px; justify-content:center; }
+.torneo-btn { padding:8px 15px; border:none; background:#2E8B57; color:white; cursor:pointer; border-radius:5px; font-weight:bold; }
+.torneo-btn.active { background:#246644; }
+.torneo-listas { max-width:700px; margin:0 auto; }
+.torneo-list { list-style:none; padding:0; display:none; }
+.torneo-list.visible { display:block; }
+.torneo-list li { padding:6px 10px; border-bottom:1px solid #ccc; }
+.torneo-list li:hover { background:#f0f0f0; transition:0.2s; }
