@@ -1,75 +1,194 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Superliga M.A.</title>
-  <style>
-    body {
-      font-family: 'Arial', sans-serif;
-      background: linear-gradient(to bottom, #fff8f0, #ffe0c0);
-      color: #333;
-      text-align: center;
-      margin: 0;
-      padding: 0;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Historial de Campeones</title>
 
-    h1 {
-      margin-top: 50px;
-      font-size: 48px;
-      color: #b22222;
-      text-shadow: 2px 2px #fff0e0;
-    }
+<style>
+/* ========================== ESTILO ULTRA FACHERO ========================== */
+body { font-family: 'Segoe UI', Tahoma, sans-serif; margin:0; padding:0; background:#f5f5f5; }
+.menu-fachero { background:#1B5E20; box-shadow:0 4px 8px rgba(0,0,0,0.2); }
+.menu-fachero ul { list-style:none; display:flex; justify-content:center; margin:0; padding:0; flex-wrap:wrap; }
+.menu-fachero ul li { margin:0 12px; }
+.menu-fachero ul li a { color:white; text-decoration:none; font-weight:600; padding:10px 18px; display:block; border-radius:8px; transition:0.3s; }
+.menu-fachero ul li a:hover { background:#2E7D32; transform:scale(1.05); }
+.menu-fachero ul li a.active { background:#4CAF50; box-shadow:0 2px 6px rgba(0,0,0,0.3); }
 
-    h2 {
-      color: #800000;
-      margin-top: 40px;
-      font-size: 28px;
-      text-shadow: 1px 1px #fff0e0;
-    }
+.section { display:none; max-width:950px; margin:20px auto; padding:20px; background:white; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.1); transition:0.3s; }
+.section.visible { display:block; }
+.section h2 { color:#1B5E20; margin-bottom:15px; }
 
-    ul {
-      list-style: none;
-      padding: 0;
-      margin-top: 20px;
-    }
+/* SUBMENÚ CAMPEONES */
+.torneos-btns { display:flex; flex-wrap:wrap; gap:10px; margin-bottom:20px; justify-content:center; }
+.torneo-btn { padding:8px 15px; border:none; background:#2E8B57; color:white; cursor:pointer; border-radius:5px; font-weight:bold; transition:0.2s; }
+.torneo-btn.active { background:#246644; }
+.torneo-btn:hover { background:#3E9E5E; transform:scale(1.05); }
 
-    li {
-      display: inline-block;
-      margin: 15px 10px;
-    }
+.torneo-listas { max-width:700px; margin:0 auto; }
+.torneo-list { list-style:none; padding:0; display:none; border-radius:6px; transition:0.3s; }
+.torneo-list.visible { display:block; }
+.torneo-list li { padding:8px 10px; border-bottom:1px solid #ccc; display:flex; align-items:center; gap:10px; border-radius:4px; transition:all 0.3s ease; opacity:0; transform:translateY(10px); }
+.torneo-list.visible li { opacity:1; transform:translateY(0); }
 
-    a {
-      display: inline-block;
-      text-decoration: none;
-      color: #fff;
-      font-size: 20px;
-      font-weight: bold;
-      background: #b22222;
-      padding: 15px 30px;
-      border-radius: 15px;
-      transition: 0.3s;
-      box-shadow: 3px 3px 8px rgba(0,0,0,0.2);
-    }
+/* Animación en cascada */
+.torneo-list.visible li:nth-child(1) { transition-delay:0.05s; }
+.torneo-list.visible li:nth-child(2) { transition-delay:0.10s; }
+.torneo-list.visible li:nth-child(3) { transition-delay:0.15s; }
+.torneo-list.visible li:nth-child(4) { transition-delay:0.20s; }
+.torneo-list.visible li:nth-child(5) { transition-delay:0.25s; }
+.torneo-list.visible li:nth-child(6) { transition-delay:0.30s; }
+.torneo-list.visible li:nth-child(7) { transition-delay:0.35s; }
+.torneo-list.visible li:nth-child(8) { transition-delay:0.40s; }
+.torneo-list.visible li:nth-child(9) { transition-delay:0.45s; }
+.torneo-list.visible li:nth-child(10){ transition-delay:0.50s; }
 
-    a:hover {
-      background: #800000;
-      transform: translateY(-3px);
-      box-shadow: 5px 5px 12px rgba(0,0,0,0.3);
-    }
+/* Escudos con animación */
+.escudo { width:30px; height:30px; object-fit:contain; transition:all 0.3s ease; opacity:0; transform:scale(0.8);}
+.torneo-list.visible li .escudo { opacity:1; transform:scale(1);}
+.torneo-list li:hover .escudo { transform:scale(1.2); filter:drop-shadow(2px 2px 4px rgba(0,0,0,0.3)); }
 
-    .menu-section {
-      margin-top: 50px;
-    }
-  </style>
+.torneo-list li:hover { color:#1B5E20; font-weight:bold; transform:translateX(3px); }
+
+/* COLORES POR TORNEO */
+.color-superlig li { background:#E8F5E9; }
+.color-ascenso li { background:#FFF3E0; }
+.color-pretemporada li { background:#E3F2FD; }
+.color-nacional li { background:#FCE4EC; }
+.color-libertadores li { background:#F3E5F5; }
+.color-sudamericana li { background:#FFFDE7; }
+</style>
 </head>
 <body>
 
-  <h1>Superliga M.A.</h1>
+<!-- MENÚ PRINCIPAL -->
+<nav class="menu-fachero">
+  <ul>
+    <li><a href="#" class="menu-btn active" data-section="primera">Primera</a></li>
+    <li><a href="#" class="menu-btn" data-section="segunda">Segunda</a></li>
+    <li><a href="#" class="menu-btn" data-section="campeones">Campeones</a></li>
+    <li><a href="#" class="menu-btn" data-section="sanciones">Sanciones</a></li>
+    <li><a href="#" class="menu-btn" data-section="goleadores">Goleadores</a></li>
+  </ul>
+</nav>
 
-  <div class="menu-section">
-    <h2>Tablas</h2>
-    <ul>
-      <li><a href="promedios/primera.html">Primera División</a></li>
-      <li><a href="promedios/segunda.html">Segunda División</a></li>
+<!-- SECCIONES -->
+<section id="primera" class="section visible">
+  <h2>⚽ Primera División</h2>
+  <p>Aquí se mostrarán los partidos y resultados de Primera.</p>
+</section>
+
+<section id="segunda" class="section">
+  <h2>⚽ Segunda División</h2>
+  <p>Aquí se mostrarán los partidos y resultados de Segunda.</p>
+</section>
+
+<section id="campeones" class="section">
+  <h2>🏆 Historial de Campeones</h2>
+
+  <!-- SUBMENÚ TORNEOS -->
+  <div class="torneos-btns">
+    <button class="torneo-btn active" data-torneo="superlig">SUPERLIG</button>
+    <button class="torneo-btn" data-torneo="liga-ascenso">LIGA DEL ASCENSO</button>
+    <button class="torneo-btn" data-torneo="pretemporada">COPA DE PRETEMPORADA</button>
+    <button class="torneo-btn" data-torneo="copa-nacional">COPA NACIONAL</button>
+    <button class="torneo-btn" data-torneo="libertadores">COPA LIBERTADORES</button>
+    <button class="torneo-btn" data-torneo="sudamericana">COPA SUDAMÉRICANA</button>
+  </div>
+
+  <!-- LISTAS DE CAMPEONES -->
+  <div class="torneo-listas">
+    <ul id="superlig" class="torneo-list color-superlig">
+      <li><img src="img/platense.png" class="escudo"> 2025 Apertura - Platense</li>
+      <li><img src="img/estudiantes_lp.png" class="escudo"> 2025 Clausura - Estudiantes (LP)</li>
+      <li><img src="img/velez.png" class="escudo"> 2024 - Vélez Sarsfield</li>
+      <li><img src="img/river.png" class="escudo"> 2023 - River Plate</li>
+      <li><img src="img/boca.png" class="escudo"> 2022 - Boca Juniors</li>
+    </ul>
+
+    <ul id="liga-ascenso" class="torneo-list color-ascenso">
+      <li><img src="img/estudiantes_rc.png" class="escudo"> 2025 - Estudiantes RC</li>
+      <li><img src="img/arsenal.png" class="escudo"> 2018/19 - Arsenal de Sarandí</li>
+      <li><img src="img/aldosivi.png" class="escudo"> 2017/18 - Aldosivi</li>
+      <li><img src="img/argentinos.png" class="escudo"> 2016/17 - Argentinos Juniors</li>
+      <li><img src="img/banfield.png" class="escudo"> 2013/14 - Banfield</li>
+    </ul>
+
+    <ul id="pretemporada" class="torneo-list color-pretemporada">
+      <li><img src="img/independiente.png" class="escudo"> 2025 - Independiente</li>
+      <li><img src="img/racing.png" class="escudo"> 2024 - Racing Club</li>
+      <li><img src="img/velez.png" class="escudo"> 2023 - Vélez Sarsfield</li>
+    </ul>
+
+    <ul id="copa-nacional" class="torneo-list color-nacional">
+      <li><img src="img/independiente_rivadavia.png" class="escudo"> 2025 - Independiente Rivadavia</li>
+      <li><img src="img/central_cordoba.png" class="escudo"> 2024 - Central Córdoba (SdE)</li>
+      <li><img src="img/estudiantes_lp.png" class="escudo"> 2023 - Estudiantes (LP)</li>
+      <li><img src="img/patronato.png" class="escudo"> 2022 - Patronato</li>
+      <li><img src="img/boca.png" class="escudo"> 2020 - Boca Juniors</li>
+    </ul>
+
+    <ul id="libertadores" class="torneo-list color-libertadores">
+      <li><img src="img/river.png" class="escudo"> 2025 - River Plate</li>
+      <li><img src="img/boca.png" class="escudo"> 2024 - Boca Juniors</li>
+      <li><img src="img/flamengo.png" class="escudo"> 2023 - Flamengo</li>
+    </ul>
+
+    <ul id="sudamericana" class="torneo-list color-sudamericana">
+      <li><img src="img/independiente.png" class="escudo"> 2025 - Independiente</li>
+      <li><img src="img/defensa.png" class="escudo"> 2024 - Defensa y Justicia</li>
+      <li><img src="img/fortaleza.png" class="escudo"> 2023 - Fortaleza</li>
     </ul>
   </div>
+</section>
+
+<section id="sanciones" class="section">
+  <h2>🛑 Sanciones</h2>
+  <p>Aquí se mostrarán sanciones de jugadores y equipos.</p>
+</section>
+
+<section id="goleadores" class="section">
+  <h2>🥅 Goleadores</h2>
+  <p>Aquí se mostrarán los goleadores de la temporada.</p>
+</section>
+
+<script>
+// --- CAMBIO DE SECCIONES PRINCIPALES ---
+const menuBtns = document.querySelectorAll('.menu-btn');
+const sections = document.querySelectorAll('.section');
+
+menuBtns.forEach(btn => {
+  btn.addEventListener('click', e => {
+    e.preventDefault();
+    menuBtns.forEach(b => b.classList.remove('active'));
+    sections.forEach(s => s.classList.remove('visible'));
+    btn.classList.add('active');
+    document.getElementById(btn.dataset.section).classList.add('visible');
+  });
+});
+
+// --- BOTONES DE TORNEOS EN CAMPEONES CON ANIMACIÓN ---
+const torneoBtns = document.querySelectorAll('.torneo-btn');
+const torneoLists = document.querySelectorAll('.torneo-list');
+
+function mostrarTorneo(torneoId) {
+  torneoLists.forEach(list => list.classList.remove('visible'));
+  const target = document.getElementById(torneoId);
+  
+  // Reset para animación
+  target.style.display = 'block';
+  setTimeout(() => {
+    target.classList.add('visible');
+  }, 50);
+}
+
+torneoBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    torneoBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    mostrarTorneo(btn.dataset.torneo);
+  });
+});
+
+// Mostrar torneo inicial al cargar
+document.addEventListener('DOMContentLoaded', () => {
