@@ -1,4 +1,14 @@
-<!-- ========================== MENÚ CAMPEONES ========================== -->
+<!-- ========================== MENÚ PRINCIPAL ========================== -->
+<nav class="menu">
+  <ul>
+    <li><a href="#" class="menu-btn active" data-section="campeones">Campeones</a></li>
+    <li><a href="#" class="menu-btn" data-section="sanciones">Sanciones</a></li>
+    <li><a href="#" class="menu-btn" data-section="goleadores">Goleadores</a></li>
+    <li><a href="#" class="menu-btn" data-section="admin">Admin</a></li>
+  </ul>
+</nav>
+
+<!-- ========================== SECCIONES ========================== -->
 <section id="campeones" class="section visible">
   <h2>🏆 Historial de Campeones</h2>
 
@@ -16,32 +26,116 @@
   <div class="torneo-listas">
     <!-- SUPERLIG -->
     <ul id="superlig" class="torneo-list visible">
-      <li>2025 Apertura - </li>
+      <li>2025 Apertura - Platense</li>
+      <li>2025 Clausura - Estudiantes (LP)</li>
+      <li>2024 - Vélez Sarsfield</li>
+      <li>2023 - River Plate</li>
+      <li>2022 - Boca Juniors</li>
     </ul>
 
     <!-- LIGA DEL ASCENSO -->
     <ul id="liga-ascenso" class="torneo-list">
-      <li>2025 - </li>
+      <li>2025 - Estudiantes RC</li>
+      <li>2018/19 - Arsenal de Sarandí</li>
+      <li>2017/18 - Aldosivi</li>
+      <li>2016/17 - Argentinos Juniors</li>
+      <li>2013/14 - Banfield</li>
     </ul>
 
     <!-- COPA DE PRETEMPORADA -->
     <ul id="pretemporada" class="torneo-list">
-      <li>2025 - General Paz Juniors</li>
+      <li>2025 - Independiente</li>
+      <li>2024 - Racing Club</li>
+      <li>2023 - Vélez Sarsfield</li>
     </ul>
 
     <!-- COPA NACIONAL -->
     <ul id="copa-nacional" class="torneo-list">
-      <li>2025 - </li>
-   </ul>
+      <li>2025 - Independiente Rivadavia</li>
+      <li>2024 - Central Córdoba (SdE)</li>
+      <li>2023 - Estudiantes (LP)</li>
+      <li>2022 - Patronato</li>
+      <li>2020 - Boca Juniors</li>
+    </ul>
 
     <!-- COPA LIBERTADORES -->
     <ul id="libertadores" class="torneo-list">
-      <li>2025 - </li>
+      <li>2025 - River Plate</li>
+      <li>2024 - Boca Juniors</li>
+      <li>2023 - Flamengo</li>
     </ul>
 
     <!-- COPA SUDAMÉRICANA -->
     <ul id="sudamericana" class="torneo-list">
-      <li>2025 - </li>
+      <li>2025 - Independiente</li>
+      <li>2024 - Defensa y Justicia</li>
+      <li>2023 - Fortaleza</li>
     </ul>
   </div>
 </section>
+
+<section id="sanciones" class="section">
+  <h2>Sanciones</h2>
+  <p>Aquí va la sección de sanciones.</p>
+</section>
+
+<section id="goleadores" class="section">
+  <h2>Goleadores</h2>
+  <p>Aquí va la sección de goleadores.</p>
+</section>
+
+<section id="admin" class="section">
+  <h2>Admin</h2>
+  <p>Aquí va la sección de administración.</p>
+</section>
+
+<!-- ========================== ESTILO ========================== -->
+<style>
+body { font-family: Arial,sans-serif; margin:0; padding:0; background:#f7f7f7; }
+.menu { background:#2E8B57; padding:10px 0; }
+.menu ul { list-style:none; display:flex; justify-content:center; margin:0; padding:0; flex-wrap:wrap; }
+.menu ul li { margin:0 10px; }
+.menu ul li a { color:white; text-decoration:none; font-weight:bold; padding:5px 10px; }
+.menu ul li a.active, .menu ul li a:hover { background:#246644; border-radius:5px; }
+.section { display:none; max-width:900px; margin:20px auto; padding:20px; background:white; border-radius:8px; box-shadow:0 0 10px rgba(0,0,0,0.1); }
+.section.visible { display:block; }
+.torneos-btns { display:flex; flex-wrap:wrap; gap:10px; margin-bottom:20px; justify-content:center; }
+.torneo-btn { padding:8px 15px; border:none; background:#2E8B57; color:white; cursor:pointer; border-radius:5px; font-weight:bold; }
+.torneo-btn.active { background:#246644; }
+.torneo-listas { max-width:700px; margin:0 auto; }
+.torneo-list { list-style:none; padding:0; display:none; }
+.torneo-list.visible { display:block; }
+.torneo-list li { padding:6px 10px; border-bottom:1px solid #ccc; }
+.torneo-list li:hover { background:#f0f0f0; transition:0.2s; }
+</style>
+
+<!-- ========================== JS UNIFICADO ========================== -->
+<script>
+// --- CAMBIO DE SECCIONES PRINCIPALES ---
+const menuBtns = document.querySelectorAll('.menu-btn');
+const sections = document.querySelectorAll('.section');
+
+menuBtns.forEach(btn => {
+  btn.addEventListener('click', e => {
+    e.preventDefault();
+    menuBtns.forEach(b => b.classList.remove('active'));
+    sections.forEach(s => s.classList.remove('visible'));
+    btn.classList.add('active');
+    document.getElementById(btn.dataset.section).classList.add('visible');
+  });
+});
+
+// --- BOTONES DE TORNEOS EN CAMPEONES ---
+const torneoBtns = document.querySelectorAll('.torneo-btn');
+const torneoLists = document.querySelectorAll('.torneo-list');
+
+torneoBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    torneoBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    torneoLists.forEach(list => list.classList.remove('visible'));
+    const target = document.getElementById(btn.dataset.torneo);
+    target.classList.add('visible');
+  });
+});
+</script>
