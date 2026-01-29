@@ -1,1 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Goleadores – Superlig M.A.</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #e6e6e6;
+      color: #000;
+    }
 
+    /* Header */
+    .header {
+      background-color: #111;
+      color: #fff;
+      padding: 10px 15px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    /* Contenedor */
+    .container {
+      max-width: 900px;
+      margin: 20px auto;
+      background-color: #fff;
+      border: 1px solid #ccc;
+    }
+
+    .titulo {
+      background-color: #f2f2f2;
+      padding: 10px;
+      font-weight: bold;
+      border-bottom: 1px solid #ccc;
+    }
+
+    /* Tabla */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+    }
+
+    th {
+      background-color: #ddd;
+      padding: 8px;
+      border: 1px solid #bbb;
+      text-align: center;
+    }
+
+    td {
+      padding: 7px;
+      border: 1px solid #ccc;
+      text-align: center;
+    }
+
+    td.nombre {
+      text-align: left;
+      font-weight: bold;
+    }
+
+    /* Puestos */
+    .puesto {
+      width: 40px;
+      font-weight: bold;
+    }
+
+    /* Responsive simple */
+    @media (max-width: 600px) {
+      body {
+        font-size: 13px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    SUPERLIG M.A. – GOLEADORES
+  </div>
+
+  <div class="container">
+    <div class="titulo">
+      Tabla de Goleadores
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>P</th>
+          <th>Jugador</th>
+          <th>Club</th>
+          <th>Goles</th>
+          <th>Part.</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="puesto">1</td>
+          <td class="nombre">Jugador 1</td>
+          <td>Club A</td>
+          <td>8</td>
+          <td>10</td>
+        </tr>
+        <tr>
+          <td class="puesto">2</td>
+          <td class="nombre">Jugador 2</td>
+          <td>Club B</td>
+          <td>6</td>
+          <td>9</td>
+        </tr>
+        <tr>
+          <td class="puesto">3</td>
+          <td class="nombre">Jugador 3</td>
+          <td>Club C</td>
+          <td>5</td>
+          <td>11</td>
+        </tr>
+        <tr>
+          <td class="puesto">4</td>
+          <td class="nombre">Jugador 4</td>
+          <td>Club D</td>
+          <td>4</td>
+          <td>10</td>
+        </tr>
+        <tr>
+          <td class="puesto">5</td>
+          <td class="nombre">Jugador 5</td>
+          <td>Club E</td>
+          <td>3</td>
+          <td>8</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</body>
+</html>
