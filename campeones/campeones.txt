@@ -7,3 +7,22 @@
 .torneo-list.visible { display:block; }
 .torneo-list li { padding:6px 10px; border-bottom:1px solid #ccc; }
 .torneo-list li:hover { background:#f0f0f0; transition:0.2s; }
+// ========================== JS TORNEOS ==========================
+const torneoBtns = document.querySelectorAll('.torneo-btn');
+const torneoLists = document.querySelectorAll('.torneo-list');
+
+torneoBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    // quitar active a todos los botones
+    torneoBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+
+    // ocultar todas las listas
+    torneoLists.forEach(list => list.classList.remove('visible'));
+
+    // mostrar la lista seleccionada
+    const target = document.getElementById(btn.dataset.torneo);
+    target.classList.add('visible');
+  });
+});
+
