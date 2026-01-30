@@ -12,7 +12,6 @@
             color: #000;
         }
 
-        /* CONTENEDOR GENERAL */
         .container {
             width: 900px;
             margin: 20px auto;
@@ -20,40 +19,46 @@
             border: 1px solid #999;
         }
 
-        /* HEADER */
         .header {
             background-color: #d9d9d9;
-            padding: 10px;
+            padding: 12px;
             font-size: 22px;
             font-weight: bold;
             border-bottom: 1px solid #999;
         }
 
-        /* MENU PRINCIPAL */
         .menu {
             padding: 20px;
         }
 
         .menu h2 {
             font-size: 18px;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
             border-bottom: 1px solid #ccc;
             padding-bottom: 5px;
         }
 
-        .menu a {
+        .categoria {
+            margin-bottom: 15px;
+        }
+
+        .categoria a {
             display: block;
             text-decoration: none;
             color: #003399;
-            font-size: 16px;
-            margin: 8px 0;
+            font-size: 17px;
+            font-weight: bold;
         }
 
-        .menu a:hover {
+        .categoria span {
+            font-size: 13px;
+            color: #555;
+        }
+
+        .categoria a:hover {
             text-decoration: underline;
         }
 
-        /* FOOTER */
         .footer {
             background-color: #f2f2f2;
             text-align: center;
@@ -74,8 +79,15 @@
     <div class="menu">
         <h2>CATEGORÍAS</h2>
 
-        <a href="superlig/index.html">▶ SUPERLIG M.A.</a>
-        <a href="ligadelascenso/index.html">▶ LIGA DEL ASCENSO</a>
+        <div class="categoria">
+            <a href="./superlig/index.html">▶ SUPERLIG M.A.</a>
+            <span>Primera división – tabla, fixture, goleadores</span>
+        </div>
+
+        <div class="categoria">
+            <a href="./ligadelascenso/index.html">▶ LIGA DEL ASCENSO</a>
+            <span>Ascenso – posiciones y estadísticas</span>
+        </div>
     </div>
 
     <div class="footer">
