@@ -1,90 +1,225 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>COPA LIBERTADORES – SUPERLIG M.A.</title>
-    <style>
-        body{
-            margin:0;
-            font-family:Arial, Helvetica, sans-serif;
-            background:#e5e5e5;
-        }
-        .container{
-            width:900px;
-            margin:20px auto;
-            background:#fff;
-            border:1px solid #999;
-        }
-        .header{
-            background:#d9d9d9;
-            padding:10px;
-            font-size:22px;
-            font-weight:bold;
-            border-bottom:1px solid #999;
-        }
-        .submenu{
-            background:#f2f2f2;
-            padding:8px;
-            border-bottom:1px solid #999;
-            font-size:14px;
-        }
-        .submenu a{
-            margin-right:15px;
-            text-decoration:none;
-            color:#003399;
-            font-weight:bold;
-        }
-        .submenu a:hover{
-            text-decoration:underline;
-        }
-        .content{
-            padding:20px;
-            font-size:14px;
-        }
-        .content h2{
-            font-size:18px;
-            border-bottom:1px solid #ccc;
-            padding-bottom:5px;
-        }
-        .footer{
-            background:#f2f2f2;
-            text-align:center;
-            font-size:12px;
-            padding:8px;
-            border-top:1px solid #999;
-        }
-    </style>
-</head>
-<body>
+<meta charset="UTF-8">
+<title>Copa Libertadores – SUPERLIG M.A.</title>
 
+<style>
+body{
+    margin:0;
+    padding:0;
+    font-family: Arial, Helvetica, sans-serif;
+    background:#e5e5e5;
+}
+.container{
+    width:900px;
+    margin:20px auto;
+    background:#fff;
+    border:1px solid #999;
+}
+.header{
+    background:#d9d9d9;
+    padding:10px;
+    font-size:22px;
+    font-weight:bold;
+    border-bottom:1px solid #999;
+}
+.submenu{
+    background:#f2f2f2;
+    padding:8px;
+    border-bottom:1px solid #999;
+    font-size:14px;
+}
+.submenu a{
+    margin-right:15px;
+    text-decoration:none;
+    color:#003399;
+    font-weight:bold;
+}
+.content{
+    padding:15px;
+}
+h2{
+    font-size:18px;
+    border-bottom:1px solid #ccc;
+    padding-bottom:5px;
+    margin-bottom:10px;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    font-size:14px;
+    margin-bottom:25px;
+}
+th, td{
+    border:1px solid #999;
+    padding:5px;
+    text-align:center;
+}
+th{ background:#efefef; }
+
+td.team{
+    text-align:left;
+}
+.team img{
+    width:18px;
+    height:18px;
+    vertical-align:middle;
+    margin-right:6px;
+}
+
+/* COLORES */
+.clasifica{ background:#c6efce; }
+.repechaje{ background:#cfe8ff; }
+
+.footer{
+    background:#f2f2f2;
+    text-align:center;
+    font-size:12px;
+    padding:8px;
+    border-top:1px solid #999;
+}
+</style>
+</head>
+
+<body>
 <div class="container">
 
-    <div class="header">
-        COPA LIBERTADORES – SUPERLIG M.A.
-    </div>
+<div class="header">COPA LIBERTADORES</div>
 
-    <div class="submenu">
-        <a href="../index.html">INICIO</a>
-        <a href="tabla.html">TABLA</a>
-        <a href="fixture.html">FIXTURE</a>
-        <a href="resultados.html">RESULTADOS</a>
-    </div>
+<div class="submenu">
+    <a href="../index.html">INICIO</a>
+    <a href="grupos.html">GRUPOS</a>
+    <a href="fixture.html">FIXTURE</a>
+    <a href="goleadores.html">GOLEADORES</a>
+</div>
 
-    <div class="content">
-        <h2>Copa Libertadores</h2>
-        <p>
-            Equipos clasificados desde la SUPERLIG M.A.
-        </p>
-        <p>
-            Seleccioná una sección del menú para continuar.
-        </p>
-    </div>
+<div class="content">
 
-    <div class="footer">
-        SUPERLIG M.A. – Copa Libertadores
-    </div>
+<!-- GRUPO A -->
+<h2>Grupo A</h2>
+<table>
+<tr><th>Pos</th><th>Equipo</th><th>PJ</th><th>Pts</th></tr>
+
+<tr class="clasifica">
+<td>1</td>
+<td class="team"><img src="../superlig/escudos/carita.png">Carita F.C.</td>
+<td>0</td><td>0</td>
+</tr>
+
+<tr class="clasifica">
+<td>2</td>
+<td class="team"><img src="../superlig/escudos/atleticobotella.png">Atlético Botella</td>
+<td>0</td><td>0</td>
+</tr>
+
+<tr class="repechaje">
+<td>3</td>
+<td class="team"><img src="../superlig/escudos/guris.png">Guris HC</td>
+<td>0</td><td>0</td>
+</tr>
+
+<tr>
+<td>4</td>
+<td class="team"><img src="../superlig/escudos/sanjose.png">Atlético San José</td>
+<td>0</td><td>0</td>
+</tr>
+</table>
+
+<!-- GRUPO B -->
+<h2>Grupo B</h2>
+<table>
+<tr><th>Pos</th><th>Equipo</th><th>PJ</th><th>Pts</th></tr>
+
+<tr class="clasifica">
+<td>1</td>
+<td class="team"><img src="../superlig/escudos/generalpaz.png">General Paz Juniors</td>
+<td>0</td><td>0</td>
+</tr>
+
+<tr class="clasifica">
+<td>2</td>
+<td class="team"><img src="../superlig/escudos/imperio.png">Imperio F.C.</td>
+<td>0</td><td>0</td>
+</tr>
+
+<tr class="repechaje">
+<td>3</td>
+<td class="team"><img src="../superlig/escudos/bug.png">Black United City</td>
+<td>0</td><td>0</td>
+</tr>
+
+<tr>
+<td>4</td>
+<td class="team"><img src="../superlig/escudos/racingvn.png">Racing VN</td>
+<td>0</td><td>0</td>
+</tr>
+</table>
+
+<!-- GRUPO C -->
+<h2>Grupo C</h2>
+<table>
+<tr><th>Pos</th><th>Equipo</th><th>PJ</th><th>Pts</th></tr>
+
+<tr class="clasifica">
+<td>1</td>
+<td class="team"><img src="../superlig/escudos/realpatapim.png">Real Patapim</td>
+<td>0</td><td>0</td>
+</tr>
+
+<tr class="clasifica">
+<td>2</td>
+<td class="team"><img src="../superlig/escudos/sacachispas.png">Sacachispas</td>
+<td>0</td><td>0</td>
+</tr>
+
+<tr class="repechaje">
+<td>3</td>
+<td class="team"><img src="../superlig/escudos/nuevachicago.png">Nueva Chicago</td>
+<td>0</td><td>0</td>
+</tr>
+
+<tr>
+<td>4</td>
+<td class="team"><img src="../superlig/escudos/velez.png">Vélez Sarsfield</td>
+<td>0</td><td>0</td>
+</tr>
+</table>
+
+<!-- GRUPO D -->
+<h2>Grupo D</h2>
+<table>
+<tr><th>Pos</th><th>Equipo</th><th>PJ</th><th>Pts</th></tr>
+
+<tr class="clasifica">
+<td>1</td>
+<td class="team"><img src="../superlig/escudos/carita.png">Carita F.C.</td>
+<td>0</td><td>0</td>
+</tr>
+
+<tr class="clasifica">
+<td>2</td>
+<td class="team"><img src="../superlig/escudos/imperio.png">Imperio F.C.</td>
+<td>0</td><td>0</td>
+</tr>
+
+<tr class="repechaje">
+<td>3</td>
+<td class="team"><img src="../superlig/escudos/guris.png">Guris HC</td>
+<td>0</td><td>0</td>
+</tr>
+
+<tr>
+<td>4</td>
+<td class="team"><img src="../superlig/escudos/racingvn.png">Racing VN</td>
+<td>0</td><td>0</td>
+</tr>
+</table>
 
 </div>
 
+<div class="footer">SUPERLIG M.A. – Copa Libertadores</div>
+</div>
 </body>
 </html>
