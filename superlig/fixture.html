@@ -55,6 +55,11 @@ h2{
     padding:8px 10px;
     border-bottom:1px solid #ddd;
     font-size:14px;
+    cursor:pointer;
+    background:#fff;
+}
+.partido:hover{
+    background:#f7f7f7;
 }
 .equipo{
     display:flex;
@@ -70,6 +75,17 @@ h2{
 .vs{
     font-weight:bold;
     color:#666;
+}
+
+/* RESULTADO */
+.resultado{
+    display:none;
+    padding:8px 10px;
+    background:#efefef;
+    border-bottom:1px solid #ddd;
+    font-weight:bold;
+    text-align:center;
+    font-size:14px;
 }
 
 /* FOOTER */
@@ -100,7 +116,7 @@ h2{
 
 <h2>Fecha 1</h2>
 
-<div class="partido">
+<div class="partido" onclick="toggleResultado(this)">
     <div class="equipo">
         <img src="https://raw.githubusercontent.com/Valendib/superliga-maa/main/superlig/escudos/carita.png">
         Carita F.C.
@@ -111,8 +127,9 @@ h2{
         <img src="https://raw.githubusercontent.com/Valendib/superliga-maa/main/superlig/escudos/sinname.png">
     </div>
 </div>
+<div class="resultado">Resultado: 2 - 0</div>
 
-<div class="partido">
+<div class="partido" onclick="toggleResultado(this)">
     <div class="equipo">
         <img src="https://raw.githubusercontent.com/Valendib/superliga-maa/main/superlig/escudos/cuatroreinos.png">
         Cuatro Reinos
@@ -123,8 +140,9 @@ h2{
         <img src="https://raw.githubusercontent.com/Valendib/superliga-maa/main/superlig/escudos/gpj.png">
     </div>
 </div>
+<div class="resultado">Resultado: 1 - 1</div>
 
-<div class="partido">
+<div class="partido" onclick="toggleResultado(this)">
     <div class="equipo">
         <img src="https://raw.githubusercontent.com/Valendib/superliga-maa/main/superlig/escudos/guris.png">
         Guris HC
@@ -135,8 +153,9 @@ h2{
         <img src="https://raw.githubusercontent.com/Valendib/superliga-maa/main/superlig/escudos/imperio.png">
     </div>
 </div>
+<div class="resultado">Resultado: 3 - 1</div>
 
-<div class="partido">
+<div class="partido" onclick="toggleResultado(this)">
     <div class="equipo">
         <img src="https://raw.githubusercontent.com/Valendib/superliga-maa/main/superlig/escudos/piggy.png">
         Piggy Bank
@@ -147,8 +166,9 @@ h2{
         <img src="https://raw.githubusercontent.com/Valendib/superliga-maa/main/superlig/escudos/racingvn.png">
     </div>
 </div>
+<div class="resultado">Resultado: 0 - 2</div>
 
-<div class="partido">
+<div class="partido" onclick="toggleResultado(this)">
     <div class="equipo">
         <img src="https://raw.githubusercontent.com/Valendib/superliga-maa/main/superlig/escudos/patapim.png">
         Real Patapim
@@ -159,8 +179,9 @@ h2{
         <img src="https://raw.githubusercontent.com/Valendib/superliga-maa/main/superlig/escudos/sacachispas.png">
     </div>
 </div>
+<div class="resultado">Resultado: 4 - 3</div>
 
-<div class="partido">
+<div class="partido" onclick="toggleResultado(this)">
     <div class="equipo">
         <img src="https://raw.githubusercontent.com/Valendib/superliga-maa/main/superlig/escudos/unionminas.png">
         Unión Minas
@@ -171,14 +192,20 @@ h2{
         <img src="https://raw.githubusercontent.com/Valendib/superliga-maa/main/superlig/escudos/velez.png">
     </div>
 </div>
-
-<!-- PARA LAS DEMÁS FECHAS -->
-<!-- Copiás desde <h2>Fecha X</h2> y pegás -->
-<!-- Solo cambiás los cruces -->
+<div class="resultado">Resultado: 2 - 2</div>
 
 </div>
 
 <div class="footer">SUPERLIG M.A.</div>
 </div>
+
+<script>
+function toggleResultado(partido){
+    const resultado = partido.nextElementSibling;
+    resultado.style.display = 
+        resultado.style.display === "block" ? "none" : "block";
+}
+</script>
+
 </body>
 </html>
