@@ -209,3 +209,101 @@ function toggleResultado(partido){
 
 </body>
 </html>
+
+<div class="content">
+
+<h2>Fecha 2</h2>
+
+<div class="partido" onclick="toggleResultado(this)">
+    <div class="equipo">
+        <img src="https://raw.githubusercontent.com/Valendib/superliga-maa/main/superlig/escudos/sacachispas.png">
+        Sacachispas
+    </div>
+    <div class="vs">VS</div>
+    <div class="equipo">
+        Guris HC
+        <img src="https://raw.githubusercontent.com/Valendib/superliga-maa/main/superlig/escudos/guris.png">
+    </div>
+</div>
+<div class="resultado">Resultado: 3 - 0</div>
+
+<div class="partido" onclick="toggleResultado(this)">
+    <div class="equipo">
+        <img src="https://raw.githubusercontent.com/Valendib/superliga-maa/main/superlig/escudos/racingvn.png">
+        Racing VN
+    </div>
+    <div class="vs">VS</div>
+    <div class="equipo">
+        Atlético Botella
+        <img src="https://raw.githubusercontent.com/Valendib/superliga-maa/main/superlig/escudos/atleticobotella.png">
+    </div>
+</div>
+<div class="resultado">Resultado: 3 - 0</div>
+
+<div class="partido" onclick="toggleResultado(this)">
+    <div class="equipo">
+        <img src="https://raw.githubusercontent.com/Valendib/superliga-maa/main/superlig/escudos/bug.png">
+        Black United City
+    </div>
+    <div class="vs">VS</div>
+    <div class="equipo">
+        Vélez Sarsfield
+        <img src="https://raw.githubusercontent.com/Valendib/superliga-maa/main/superlig/escudos/velez.png">
+    </div>
+</div>
+<div class="resultado">Resultado: 0 - 3</div>
+
+<div class="partido" onclick="toggleResultado(this)">
+    <div class="equipo">
+        <img src="https://raw.githubusercontent.com/Valendib/superliga-maa/main/superlig/escudos/sanjose.png">
+        Atlético San José
+    </div>
+    <div class="vs">VS</div>
+    <div class="equipo">
+        Real Patapim
+        <img src="https://raw.githubusercontent.com/Valendib/superliga-maa/main/superlig/escudos/realpatapim.png">
+    </div>
+</div>
+<div class="resultado">Resultado: 6 - 2</div>
+
+<div class="partido" onclick="toggleResultado(this)">
+    <div class="equipo">
+        <img src="https://raw.githubusercontent.com/Valendib/superliga-maa/main/superlig/escudos/imperio.png">
+        Imperio F.C.
+    </div>
+    <div class="vs">VS</div>
+    <div class="equipo">
+        Carita F.C.
+        <img src="https://raw.githubusercontent.com/Valendib/superliga-maa/main/superlig/escudos/carita.png">
+    </div>
+</div>
+<div class="resultado">Resultado: 0 - 9</div>
+
+<div class="partido" onclick="toggleResultado(this)">
+    <div class="equipo">
+        <img src="https://raw.githubusercontent.com/Valendib/superliga-maa/main/superlig/escudos/nuevachicago.png">
+        Nueva Chicago
+    </div>
+    <div class="vs">VS</div>
+    <div class="equipo">
+        General Paz Juniors
+        <img src="https://raw.githubusercontent.com/Valendib/superliga-maa/main/superlig/escudos/generalpaz.png">
+    </div>
+</div>
+<div class="resultado">Resultado: 1 - 2</div>
+
+</div>
+
+<div class="footer">SUPERLIG M.A.</div>
+</div>
+
+<script>
+function toggleResultado(partido){
+    const resultado = partido.nextElementSibling;
+    resultado.style.display = 
+        resultado.style.display === "block" ? "none" : "block";
+}
+</script>
+
+</body>
+</html>
