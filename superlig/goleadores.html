@@ -11,7 +11,6 @@
       color: #000;
     }
 
-    /* Header */
     .header {
       background-color: #111;
       color: #fff;
@@ -20,7 +19,6 @@
       font-weight: bold;
     }
 
-    /* Contenedor */
     .container {
       max-width: 900px;
       margin: 20px auto;
@@ -35,7 +33,6 @@
       border-bottom: 1px solid #ccc;
     }
 
-    /* Tabla */
     table {
       width: 100%;
       border-collapse: collapse;
@@ -60,13 +57,22 @@
       font-weight: bold;
     }
 
-    /* Puestos */
     .puesto {
       width: 40px;
       font-weight: bold;
     }
 
-    /* Responsive simple */
+    .escudo img {
+      width: 24px;
+      height: 24px;
+      object-fit: contain;
+    }
+
+    .separador {
+      height: 20px;
+      background:#e6e6e6;
+    }
+
     @media (max-width: 600px) {
       body {
         font-size: 13px;
@@ -74,21 +80,22 @@
     }
   </style>
 </head>
+
 <body>
 
   <div class="header">
-    SUPERLIG M.A. – GOLEADORES
+    SUPERLIG M.A. – ESTADÍSTICAS
   </div>
 
+  <!-- GOLEADORES -->
   <div class="container">
-    <div class="titulo">
-      Tabla de Goleadores
-    </div>
+    <div class="titulo">Tabla de Goleadores</div>
 
     <table>
       <thead>
         <tr>
           <th>P</th>
+          <th>Escudo</th>
           <th>Jugador</th>
           <th>Club</th>
           <th>Goles</th>
@@ -98,6 +105,7 @@
       <tbody>
         <tr>
           <td class="puesto">1</td>
+          <td class="escudo"><img src="escudos/clubA.png"></td>
           <td class="nombre">Jugador 1</td>
           <td>Club A</td>
           <td>8</td>
@@ -105,6 +113,7 @@
         </tr>
         <tr>
           <td class="puesto">2</td>
+          <td class="escudo"><img src="escudos/clubB.png"></td>
           <td class="nombre">Jugador 2</td>
           <td>Club B</td>
           <td>6</td>
@@ -112,24 +121,57 @@
         </tr>
         <tr>
           <td class="puesto">3</td>
+          <td class="escudo"><img src="escudos/clubC.png"></td>
           <td class="nombre">Jugador 3</td>
           <td>Club C</td>
           <td>5</td>
           <td>11</td>
         </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="separador"></div>
+
+  <!-- ASISTENCIAS -->
+  <div class="container">
+    <div class="titulo">Tabla de Asistencias</div>
+
+    <table>
+      <thead>
         <tr>
-          <td class="puesto">4</td>
-          <td class="nombre">Jugador 4</td>
-          <td>Club D</td>
-          <td>4</td>
+          <th>P</th>
+          <th>Escudo</th>
+          <th>Jugador</th>
+          <th>Club</th>
+          <th>Asist.</th>
+          <th>Part.</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="puesto">1</td>
+          <td class="escudo"><img src="escudos/carita.png"></td>
+          <td class="nombre">Jugador A</td>
+          <td>Club A</td>
+          <td>7</td>
           <td>10</td>
         </tr>
         <tr>
-          <td class="puesto">5</td>
-          <td class="nombre">Jugador 5</td>
+          <td class="puesto">2</td>
+          <td class="escudo"><img src="escudos/nuevachicago.png"></td>
+          <td class="nombre">Jugador B</td>
+          <td>Club D</td>
+          <td>5</td>
+          <td>9</td>
+        </tr>
+        <tr>
+          <td class="puesto">3</td>
+          <td class="escudo"><img src="escudos/clubE.png"></td>
+          <td class="nombre">Jugador C</td>
           <td>Club E</td>
-          <td>3</td>
-          <td>8</td>
+          <td>4</td>
+          <td>11</td>
         </tr>
       </tbody>
     </table>
