@@ -2,210 +2,183 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<title>Resultados - SUPERLIG M.A.</title>
+<title>Fixture - SUPERLIG M.A.</title>
 
 <style>
 body{
     margin:0;
-    padding:0;
-    font-family: Arial, Helvetica, sans-serif;
-    background:#0f2f24;
-    color:#fff;
+    font-family:Arial, Helvetica, sans-serif;
+    background:#e5e5e5;
 }
 .container{
     width:900px;
     margin:20px auto;
+    background:#fff;
+    border:1px solid #999;
 }
 .header{
-    background:#123c2d;
-    padding:12px;
+    background:#d9d9d9;
+    padding:10px;
     font-size:22px;
     font-weight:bold;
-    border-radius:6px;
+    border-bottom:1px solid #999;
 }
-
-/* CATEGORIAS */
-.categoria{
-    margin-top:15px;
-    border-radius:6px;
-    overflow:hidden;
+.submenu{
+    background:#f2f2f2;
+    padding:8px;
+    border-bottom:1px solid #999;
 }
-.categoria-titulo{
-    background:#0b3a2b;
-    padding:10px 14px;
-    font-size:15px;
+.submenu a{
+    margin-right:15px;
+    color:#003399;
+    text-decoration:none;
     font-weight:bold;
-    cursor:pointer;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
 }
-.categoria-titulo:hover{
-    background:#0f4a36;
+.submenu a:hover{
+    text-decoration:underline;
 }
-.categoria-contenido{
-    background:#0b2a20;
+.content{
+    padding:15px;
+}
+h2{
+    font-size:18px;
+    border-bottom:1px solid #ccc;
+    padding-bottom:5px;
+    margin-top:25px;
 }
 
 /* PARTIDOS */
 .partido{
-    display:grid;
-    grid-template-columns: 70px 1fr 1fr;
+    display:flex;
     align-items:center;
-    padding:10px;
-    border-top:1px solid #1f5a44;
-}
-.estado{
-    font-size:13px;
-    color:#9adfae;
-    text-align:center;
+    justify-content:space-between;
+    padding:8px 10px;
+    border-bottom:1px solid #ddd;
+    font-size:14px;
 }
 .equipo{
     display:flex;
     align-items:center;
-    justify-content:space-between;
+    gap:6px;
+    width:40%;
 }
 .equipo img{
-    width:26px;
-    height:26px;
+    width:20px;
+    height:20px;
     object-fit:contain;
 }
-.nombre{
-    flex:1;
-    margin:0 8px;
-}
-.marcador{
-    font-size:20px;
+.vs{
     font-weight:bold;
-}
-.goles{
-    font-size:12px;
-    color:#b5e3c5;
-    padding:0 12px 8px 12px;
+    color:#666;
 }
 
-/* COPAS */
-.subtitulo{
-    background:#123c2d;
-    padding:8px 14px;
-    font-size:14px;
-    font-weight:bold;
-    border-top:1px solid #1f5a44;
+/* FOOTER */
+.footer{
+    background:#f2f2f2;
+    text-align:center;
+    font-size:12px;
+    padding:8px;
+    border-top:1px solid #999;
 }
 </style>
-
-<script>
-function toggleCategoria(id){
-    const el = document.getElementById(id);
-    el.style.display = el.style.display === "none" ? "block" : "none";
-}
-</script>
 </head>
 
 <body>
-
 <div class="container">
 
-<div class="header">RESULTADOS – SUPERLIG M.A.</div>
+<div class="header">SUPERLIG M.A.</div>
 
-<!-- SUPERLIG -->
-<div class="categoria">
-    <div class="categoria-titulo" onclick="toggleCategoria('superlig')">
-        SUPERLIG
-        <span>▼</span>
+<div class="submenu">
+<a href="index.html">INICIO</a>
+<a href="tabla.html">TABLA</a>
+<a href="fixture.html">FIXTURE</a>
+<a href="goleadores.html">GOLEADORES</a>
+<a href="sanciones.html">SANCIONES</a>
+</div>
+
+<div class="content">
+
+<h2>Fecha 1</h2>
+
+<div class="partido">
+    <div class="equipo">
+        <img src="https://raw.githubusercontent.com/Valendib/superliga-maa/main/superlig/escudos/carita.png">
+        Carita F.C.
     </div>
-    <div class="categoria-contenido" id="superlig">
-
-        <div class="partido">
-            <div class="estado">Final</div>
-            <div class="equipo">
-                <img src="https://raw.githubusercontent.com/Valendib/superliga-maa/main/superlig/escudos/carita.png">
-                <div class="nombre">Carita F.C.</div>
-                <div class="marcador">2 -</div>
-            </div>
-            <div class="equipo">
-                <div class="marcador"> 1</div>
-                <div class="nombre">Guris HC</div>
-                <img src="https://raw.githubusercontent.com/Valendib/superliga-maa/main/superlig/escudos/guris.png">
-            </div>
-        </div>
-        <div class="goles">⚽ Pérez 23’, Gómez 70’ | ⚽ López 55’</div>
-
+    <div class="vs">VS</div>
+    <div class="equipo">
+        Club Sin Name
+        <img src="https://raw.githubusercontent.com/Valendib/superliga-maa/main/superlig/escudos/sinname.png">
     </div>
 </div>
 
-<!-- ASCENSO -->
-<div class="categoria">
-    <div class="categoria-titulo" onclick="toggleCategoria('ascenso')">
-        LIGA DEL ASCENSO
-        <span>▼</span>
+<div class="partido">
+    <div class="equipo">
+        <img src="https://raw.githubusercontent.com/Valendib/superliga-maa/main/superlig/escudos/cuatroreinos.png">
+        Cuatro Reinos
     </div>
-    <div class="categoria-contenido" id="ascenso">
-
-        <div class="partido">
-            <div class="estado">Final</div>
-            <div class="equipo">
-                <img src="https://raw.githubusercontent.com/Valendib/superliga-maa/main/superlig/escudos/piggy.png">
-                <div class="nombre">Piggy Bank</div>
-                <div class="marcador">0</div>
-            </div>
-            <div class="equipo">
-                <div class="marcador">0</div>
-                <div class="nombre">Imperio F.C.</div>
-                <img src="https://raw.githubusercontent.com/Valendib/superliga-maa/main/superlig/escudos/imperio.png">
-            </div>
-        </div>
-        <div class="goles">—</div>
-
+    <div class="vs">VS</div>
+    <div class="equipo">
+        General Paz Juniors
+        <img src="https://raw.githubusercontent.com/Valendib/superliga-maa/main/superlig/escudos/gpj.png">
     </div>
 </div>
 
-<!-- COPAS -->
-<div class="categoria">
-    <div class="categoria-titulo" onclick="toggleCategoria('copas')">
-        COPAS INTERNACIONALES
-        <span>▼</span>
+<div class="partido">
+    <div class="equipo">
+        <img src="https://raw.githubusercontent.com/Valendib/superliga-maa/main/superlig/escudos/guris.png">
+        Guris HC
     </div>
-    <div class="categoria-contenido" id="copas">
-
-        <div class="subtitulo">LIBERTADORES</div>
-
-        <div class="partido">
-            <div class="estado">Final</div>
-            <div class="equipo">
-                <img src="https://raw.githubusercontent.com/Valendib/superliga-maa/main/superlig/escudos/carita.png">
-                <div class="nombre">Carita F.C.</div>
-                <div class="marcador">3</div>
-            </div>
-            <div class="equipo">
-                <div class="marcador">1</div>
-                <div class="nombre">Cuatro Reinos</div>
-                <img src="https://raw.githubusercontent.com/Valendib/superliga-maa/main/superlig/escudos/cuatroreinos.png">
-            </div>
-        </div>
-        <div class="goles">⚽ Díaz 12’, López 55’, Pérez 81’</div>
-
-        <div class="subtitulo">SUDAMERICANA</div>
-
-        <div class="partido">
-            <div class="estado">58'</div>
-            <div class="equipo">
-                <img src="https://raw.githubusercontent.com/Valendib/superliga-maa/main/superlig/escudos/sacachispas.png">
-                <div class="nombre">Sacachispas</div>
-                <div class="marcador">1</div>
-            </div>
-            <div class="equipo">
-                <div class="marcador">0</div>
-                <div class="nombre">Racing VN</div>
-                <img src="https://raw.githubusercontent.com/Valendib/superliga-maa/main/superlig/escudos/racingvn.png">
-            </div>
-        </div>
-        <div class="goles">⚽ Díaz 45+2’ (Pen)</div>
-
+    <div class="vs">VS</div>
+    <div class="equipo">
+        Imperio F.C.
+        <img src="https://raw.githubusercontent.com/Valendib/superliga-maa/main/superlig/escudos/imperio.png">
     </div>
 </div>
 
+<div class="partido">
+    <div class="equipo">
+        <img src="https://raw.githubusercontent.com/Valendib/superliga-maa/main/superlig/escudos/piggy.png">
+        Piggy Bank
+    </div>
+    <div class="vs">VS</div>
+    <div class="equipo">
+        Racing VN
+        <img src="https://raw.githubusercontent.com/Valendib/superliga-maa/main/superlig/escudos/racingvn.png">
+    </div>
 </div>
 
+<div class="partido">
+    <div class="equipo">
+        <img src="https://raw.githubusercontent.com/Valendib/superliga-maa/main/superlig/escudos/patapim.png">
+        Real Patapim
+    </div>
+    <div class="vs">VS</div>
+    <div class="equipo">
+        Sacachispas
+        <img src="https://raw.githubusercontent.com/Valendib/superliga-maa/main/superlig/escudos/sacachispas.png">
+    </div>
+</div>
+
+<div class="partido">
+    <div class="equipo">
+        <img src="https://raw.githubusercontent.com/Valendib/superliga-maa/main/superlig/escudos/unionminas.png">
+        Unión Minas
+    </div>
+    <div class="vs">VS</div>
+    <div class="equipo">
+        Vélez Sarsfield
+        <img src="https://raw.githubusercontent.com/Valendib/superliga-maa/main/superlig/escudos/velez.png">
+    </div>
+</div>
+
+<!-- PARA LAS DEMÁS FECHAS -->
+<!-- Copiás desde <h2>Fecha X</h2> y pegás -->
+<!-- Solo cambiás los cruces -->
+
+</div>
+
+<div class="footer">SUPERLIG M.A.</div>
+</div>
 </body>
 </html>
