@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Tabla de Posiciones - 3RA DIVISIÓN</title>
+
+<style>
+body{
+    margin:0;
+    padding:0;
+    font-family: Arial, Helvetica, sans-serif;
+    background:#e5e5e5;
+}
+.container{
+    width:900px;
+    margin:20px auto;
+    background:#fff;
+    border:1px solid #999;
+}
+.header{
+    background:#d9d9d9;
+    padding:10px;
+    font-size:22px;
+    font-weight:bold;
+    border-bottom:1px solid #999;
+}
+.submenu{
+    background:#f2f2f2;
+    padding:8px;
+    border-bottom:1px solid #999;
+    font-size:14px;
+}
+.submenu a{
+    margin-right:15px;
+    text-decoration:none;
+    color:#003399;
+    font-weight:bold;
+}
+.submenu a:hover{
+    text-decoration:underline;
+}
+.content{
+    padding:15px;
+}
+h2{
+    font-size:18px;
+    border-bottom:1px solid #ccc;
+    padding-bottom:5px;
+    margin-bottom:10px;
+}
+
+/* TABLA */
+table{
+    width:100%;
+    border-collapse:collapse;
+    font-size:14px;
+    margin-bottom:20px;
+}
+th, td{
+    border:1px solid #999;
+    padding:5px;
+    text-align:center;
+}
+th{
+    background:#efefef;
+}
+td.team{
+    text-align:left;
+}
+.team img{
+    width:18px;
+    height:18px;
+    object-fit:contain;
+    vertical-align:middle;
+    margin-right:6px;
+}
+
+/* COLORES 3RA */
+.ascenso-directo{ background:#fff3a0; }   /* 1° */
+.playoff{ background:#c6efce; }           /* 2° a 4° */
+.descenso-playoff{ background:#ffd8a8; }  /* 7° */
+.descenso{ background:#f4b6b6; }           /* 8° */
+
+/* REFERENCIAS */
+.referencias{
+    font-size:13px;
+}
+.referencias div{
+    margin:3px 0;
+}
+.color{
+    display:inline-block;
+    width:12px;
+    height:12px;
+    margin-right:5px;
+    border:1px solid #666;
+}
+.footer{
+    background:#f2f2f2;
+    text-align:center;
+    font-size:12px;
+    padding:8px;
+    border-top:1px solid #999;
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+
+<div class="header">3RA DIVISIÓN – SUPERLIG M.A.</div>
+
+<div class="submenu">
+    <a href="index.html">INICIO</a>
+    <a href="tabla.html">TABLA</a>
+    <a href="fixture.html">FIXTURE</a>
+    <a href="goleadores.html">GOLEADORES</a>
+    <a href="sanciones.html">SANCIONES</a>
+</div>
+
+<div class="content">
+
+<h2>Zona A</h2>
+<table>
+<tr>
+<th>Pos</th><th>Equipo</th><th>PJ</th><th>Pts</th>
+</tr>
+
+<tr class="ascenso-directo"><td>1</td><td class="team">Equipo A1</td><td>0</td><td>0</td></tr>
+<tr class="playoff"><td>2</td><td class="team">Equipo A2</td><td>0</td><td>0</td></tr>
+<tr class="playoff"><td>3</td><td class="team">Equipo A3</td><td>0</td><td>0</td></tr>
+<tr class="playoff"><td>4</td><td class="team">Equipo A4</td><td>0</td><td>0</td></tr>
+<tr><td>5</td><td class="team">Equipo A5</td><td>0</td><td>0</td></tr>
+<tr><td>6</td><td class="team">Equipo A6</td><td>0</td><td>0</td></tr>
+<tr class="descenso-playoff"><td>7</td><td class="team">Equipo A7</td><td>0</td><td>0</td></tr>
+<tr class="descenso"><td>8</td><td class="team">Equipo A8</td><td>0</td><td>0</td></tr>
+</table>
+
+<h2>Zona B</h2>
+<table>
+<tr>
+<th>Pos</th><th>Equipo</th><th>PJ</th><th>Pts</th>
+</tr>
+
+<tr class="ascenso-directo"><td>1</td><td class="team">Equipo B1</td><td>0</td><td>0</td></tr>
+<tr class="playoff"><td>2</td><td class="team">Equipo B2</td><td>0</td><td>0</td></tr>
+<tr class="playoff"><td>3</td><td class="team">Equipo B3</td><td>0</td><td>0</td></tr>
+<tr class="playoff"><td>4</td><td class="team">Equipo B4</td><td>0</td><td>0</td></tr>
+<tr><td>5</td><td class="team">Equipo B5</td><td>0</td><td>0</td></tr>
+<tr><td>6</td><td class="team">Equipo B6</td><td>0</td><td>0</td></tr>
+<tr class="descenso-playoff"><td>7</td><td class="team">Equipo B7</td><td>0</td><td>0</td></tr>
+<tr class="descenso"><td>8</td><td class="team">Equipo B8</td><td>0</td><td>0</td></tr>
+</table>
+
+<div class="referencias">
+<div><span class="color" style="background:#fff3a0"></span> Final por el 1° ascenso</div>
+<div><span class="color" style="background:#c6efce"></span> Playoffs de ascenso</div>
+<div><span class="color" style="background:#ffd8a8"></span> Final por el descenso</div>
+<div><span class="color" style="background:#f4b6b6"></span> Desciende</div>
+</div>
+
+</div>
+
+<div class="footer">3RA DIVISIÓN – SUPERLIG M.A.</div>
+
+</div>
+</body>
+</html>
