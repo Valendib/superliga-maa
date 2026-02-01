@@ -1,109 +1,197 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>PRIMERA C – SUPERLIG M.A.</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, Helvetica, sans-serif;
-            background-color: #e5e5e5;
-            color: #000;
-        }
+<meta charset="UTF-8">
+<title>Tabla de Posiciones - PRIMERA C</title>
 
-        .container {
-            width: 900px;
-            margin: 20px auto;
-            background-color: #ffffff;
-            border: 1px solid #999;
-        }
+<style>
+body{
+    margin:0;
+    padding:0;
+    font-family: Arial, Helvetica, sans-serif;
+    background:#e5e5e5;
+}
+.container{
+    width:900px;
+    margin:20px auto;
+    background:#fff;
+    border:1px solid #999;
+}
+.header{
+    background:#d9d9d9;
+    padding:10px;
+    font-size:22px;
+    font-weight:bold;
+    border-bottom:1px solid #999;
+}
+.submenu{
+    background:#f2f2f2;
+    padding:8px;
+    border-bottom:1px solid #999;
+    font-size:14px;
+}
+.submenu a{
+    margin-right:15px;
+    text-decoration:none;
+    color:#003399;
+    font-weight:bold;
+}
+.submenu a:hover{
+    text-decoration:underline;
+}
+.content{
+    padding:15px;
+}
+h2{
+    font-size:18px;
+    border-bottom:1px solid #ccc;
+    padding-bottom:5px;
+    margin-bottom:10px;
+}
 
-        /* HEADER */
-        .header {
-            background-color: #d9d9d9;
-            padding: 10px;
-            font-size: 22px;
-            font-weight: bold;
-            border-bottom: 1px solid #999;
-        }
+/* TABLA */
+table{
+    width:100%;
+    border-collapse:collapse;
+    font-size:14px;
+    margin-bottom:20px;
+}
+th, td{
+    border:1px solid #999;
+    padding:5px;
+    text-align:center;
+}
+th{
+    background:#efefef;
+}
+td.team{
+    text-align:left;
+}
+.team img{
+    width:18px;
+    height:18px;
+    object-fit:contain;
+    vertical-align:middle;
+    margin-right:6px;
+}
 
-        /* SUBMENU */
-        .submenu {
-            background-color: #f2f2f2;
-            padding: 8px;
-            border-bottom: 1px solid #999;
-            font-size: 14px;
-        }
+/* COLORES PRIMERA C */
+.ascenso-directo{ background:#fff3a0; }   /* 1° */
+.playoff{ background:#c6efce; }           /* 2° a 4° */
+.descenso-playoff{ background:#ffd8a8; }  /* 7° */
+.descenso{ background:#f4b6b6; }           /* 8° */
 
-        .submenu a {
-            margin-right: 15px;
-            text-decoration: none;
-            color: #003399;
-            font-weight: bold;
-        }
+/* REFERENCIAS */
+.referencias{
+    margin-top:10px;
+    font-size:13px;
+}
+.referencias div{
+    margin:3px 0;
+}
+.color{
+    display:inline-block;
+    width:12px;
+    height:12px;
+    margin-right:5px;
+    border:1px solid #666;
+}
 
-        .submenu a:hover {
-            text-decoration: underline;
-        }
-
-        /* CONTENIDO */
-        .content {
-            padding: 20px;
-            font-size: 14px;
-        }
-
-        .content h2 {
-            font-size: 18px;
-            border-bottom: 1px solid #ccc;
-            padding-bottom: 5px;
-            margin-bottom: 15px;
-        }
-
-        /* FOOTER */
-        .footer {
-            background-color: #f2f2f2;
-            text-align: center;
-            font-size: 12px;
-            padding: 8px;
-            border-top: 1px solid #999;
-        }
-    </style>
+.footer{
+    background:#f2f2f2;
+    text-align:center;
+    font-size:12px;
+    padding:8px;
+    border-top:1px solid #999;
+}
+</style>
 </head>
-<body>
 
+<body>
 <div class="container">
 
-    <div class="header">
-        PRIMERA C – SUPERLIG M.A.
-    </div>
+<div class="header">PRIMERA C – SUPERLIG M.A.</div>
 
-    <div class="submenu">
-        <a href="../index.html">INICIO</a>
-        <a href="tabla.html">TABLA</a>
-        <a href="fixture.html">FIXTURE</a>
-        <a href="goleadores.html">GOLEADORES</a>
-        <a href="sanciones.html">SANCIONES</a>
-    </div>
+<div class="submenu">
+    <a href="index.html">INICIO</a>
+    <a href="tabla.html">TABLA</a>
+    <a href="fixture.html">FIXTURE</a>
+    <a href="goleadores.html">GOLEADORES</a>
+    <a href="sanciones.html">SANCIONES</a>
+</div>
 
-    <div class="content">
-        <h2>Bienvenidos a la PRIMERA C</h2>
-        <p>
-            Estadísticas, posiciones, resultados y toda la información
-            actualizada de la PRIMERA C
-        </p>
-        <p>
-            Seleccioná una opción del menú superior para continuar.
-        </p>
-    </div>
+<div class="content">
 
-    <div class="footer">
-        PRIMERA C – SUPERLIG M.A. | Estilo Promiedos
-    </div>
+<h2>Zona A</h2>
+<table>
+<tr>
+<th>Pos</th><th>Equipo</th><th>PJ</th><th>G</th><th>E</th><th>P</th><th>GF</th><th>GC</th><th>DG</th><th>Pts</th>
+</tr>
+
+<tr class="ascenso-directo">
+<td>1</td>
+<td class="team"><img src="escudos/equipo1.png">Equipo A1</td>
+<td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+</tr>
+
+<tr class="playoff">
+<td>2</td>
+<td class="team"><img src="escudos/equipo2.png">Equipo A2</td>
+<td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+</tr>
+
+<tr class="playoff">
+<td>3</td>
+<td class="team"><img src="escudos/equipo3.png">Equipo A3</td>
+<td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+</tr>
+
+<tr class="playoff">
+<td>4</td>
+<td class="team"><img src="escudos/equipo4.png">Equipo A4</td>
+<td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+</tr>
+
+<tr>
+<td>5</td>
+<td class="team"><img src="escudos/equipo5.png">Equipo A5</td>
+<td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+</tr>
+
+<tr>
+<td>6</td>
+<td class="team"><img src="escudos/equipo6.png">Equipo A6</td>
+<td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+</tr>
+
+<tr class="descenso-playoff">
+<td>7</td>
+<td class="team"><img src="escudos/racingvn.png">BOLIVIA</td>
+<td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+</tr>
+
+<tr class="descenso">
+<td>8</td>
+<td class="team"><img src="escudos/equipo8.png">Equipo A8</td>
+<td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+</tr>
+</table>
+
+<h2>Zona B</h2>
+<!-- Copiás exactamente la misma tabla cambiando equipos y escudos -->
+<!-- Zona B1 a B8 -->
+
+<div class="referencias">
+<div><span class="color" style="background:#fff3a0"></span> Final por el 1° ascenso</div>
+<div><span class="color" style="background:#c6efce"></span> Playoffs de ascenso</div>
+<div><span class="color" style="background:#ffd8a8"></span> Final por el descenso</div>
+<div><span class="color" style="background:#f4b6b6"></span> Desciende</div>
+</div>
 
 </div>
 
+<div class="footer">PRIMERA C – SUPERLIG M.A.</div>
+
+</div>
 </body>
 </html>
-
-
