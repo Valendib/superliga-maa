@@ -1,291 +1,280 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<title>Copa Libertadores – SUPERLIG M.A.</title>
+    <meta charset="UTF-8">
+    <title>Copa Libertadores – SUPERLIG M.A.</title>
 
-<style>
-body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    background: #e5e5e5;
-}
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #e5e5e5;
+        }
 
-.container {
-    width: 900px;
-    margin: 20px auto;
-    background: #fff;
-    border: 1px solid #999;
-}
+        .container {
+            width: 900px;
+            margin: 20px auto;
+            background: #fff;
+            border: 1px solid #999;
+        }
 
-.header {
-    background: #d9d9d9;
-    padding: 10px;
-    font-size: 22px;
-    font-weight: bold;
-    border-bottom: 1px solid #999;
-    text-align: center;
-}
+        .header {
+            background: #d9d9d9;
+            padding: 10px;
+            font-size: 22px;
+            font-weight: bold;
+            border-bottom: 1px solid #999;
+            text-align: center;
+        }
 
-.content {
-    padding: 15px;
-}
+        .submenu {
+            background: #f4f4f4;
+            padding: 10px;
+            text-align: center;
+        }
 
-h2 {
-    font-size: 18px;
-    border-bottom: 1px solid #ccc;
-    padding-bottom: 5px;
-    margin-bottom: 10px;
-}
+        .submenu a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #333;
+        }
 
-table {
-    width: 100%;
-    border-collapse: collapse;
-    font-size: 14px;
-    margin-bottom: 25px;
-}
+        .content {
+            padding: 15px;
+        }
 
-th, td {
-    border: 1px solid #999;
-    padding: 5px;
-    text-align: center;
-}
+        h2 {
+            font-size: 18px;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 5px;
+            margin-bottom: 10px;
+        }
 
-th {
-    background: #efefef;
-}
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+            margin-bottom: 25px;
+        }
 
-td.team {
-    text-align: left;
-}
+        th, td {
+            border: 1px solid #999;
+            padding: 5px;
+            text-align: center;
+        }
 
-.team img {
-    width: 18px;
-    height: 18px;
-    vertical-align: middle;
-    margin-right: 6px;
-}
+        th {
+            background: #efefef;
+        }
 
-/* COLORES TABLA */
-.clasifica {
-    background: #c6efce;
-}
+        td.team {
+            text-align: left;
+        }
 
-.repechaje {
-    background: #cfe8ff;
-}
+        .team img {
+            width: 18px;
+            height: 18px;
+            vertical-align: middle;
+            margin-right: 6px;
+        }
 
-/* LEYENDA */
-.referencias{
-    margin-top:12px;
-    font-size:13px;
-}
-.referencias div{
-    margin:4px 0;
-}
-.color{
-    display:inline-block;
-    width:12px;
-    height:12px;
-    margin-right:6px;
-    border:1px solid #666;
-}
+        /* COLORES TABLA */
+        .clasifica {
+            background: #c6efce;
+        }
 
-.footer{
-    background:#f2f2f2;
-    text-align:center;
-    font-size:12px;
-    padding:8px;
-    border-top:1px solid #999;
-}
-</style>
+        .repechaje {
+            background: #cfe8ff;
+        }
+
+        /* LEYENDA */
+        .referencias {
+            margin-top: 12px;
+            font-size: 13px;
+        }
+
+        .referencias div {
+            margin: 4px 0;
+        }
+
+        .color {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            margin-right: 6px;
+            border: 1px solid #666;
+        }
+
+        .footer {
+            background: #f2f2f2;
+            text-align: center;
+            font-size: 12px;
+            padding: 8px;
+            border-top: 1px solid #999;
+        }
+
+        /* Estilo para los grupos alineados */
+        .group-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .group {
+            width: 48%;
+        }
+    </style>
 </head>
 
 <body>
-<div class="container">
+    <div class="container">
 
-<div class="header">COPA LIBERTADORES</div>
+        <div class="header">COPA LIBERTADORES</div>
 
-<div class="submenu">
-    <a href="index.html">INICIO</a>
-    <a href="cuartos.html">CUARTOS</a>
-    <a href="fixture.html">FIXTURE</a>
-    <a href="goleadores.html">GOLEADORES</a>
-    <a href="sanciones.html">SANCIONES</a>
-</div>
+        <div class="submenu">
+            <a href="index.html">INICIO</a>
+            <a href="cuartos.html">CUARTOS</a>
+            <a href="fixture.html">FIXTURE</a>
+            <a href="goleadores.html">GOLEADORES</a>
+            <a href="sanciones.html">SANCIONES</a>
+        </div>
 
-/* Estilo para los grupos alineados */
-.group-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 20px;
-}
+        <div class="content">
+            <!-- Contenedor de grupos alineados -->
+            <div class="group-container">
+                <!-- GRUPO A -->
+                <div class="group">
+                    <h2>Grupo A</h2>
+                    <table>
+                        <tr><th>Pos</th><th>Equipo</th><th>PJ</th><th>PG</th><th>PE</th><th>PP</th><th>GF</th><th>GC</th><th>DIF</th><th>PTS</th></tr>
+                        <tr class="clasifica">
+                            <td>1</td>
+                            <td class="team"><img src="../superlig/escudos/carita.png">Carita F.C.</td>
+                            <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+                        </tr>
+                        <tr class="clasifica">
+                            <td>2</td>
+                            <td class="team"><img src="../superlig/escudos/atleticobotella.png">Atlético Botella</td>
+                            <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+                        </tr>
+                        <tr class="repechaje">
+                            <td>3</td>
+                            <td class="team"><img src="../superlig/escudos/guris.png">Guris HC</td>
+                            <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td class="team"><img src="../superlig/escudos/sanjose.png">Atlético San José</td>
+                            <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+                        </tr>
+                    </table>
+                </div>
 
-.group {
-    width: 48%;
-}
-</style>
-</head>
+                <!-- GRUPO B -->
+                <div class="group">
+                    <h2>Grupo B</h2>
+                    <table>
+                        <tr><th>Pos</th><th>Equipo</th><th>PJ</th><th>PG</th><th>PE</th><th>PP</th><th>GF</th><th>GC</th><th>DIF</th><th>PTS</th></tr>
+                        <tr class="clasifica">
+                            <td>1</td>
+                            <td class="team"><img src="../superlig/escudos/generalpaz.png">General Paz Juniors</td>
+                            <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+                        </tr>
+                        <tr class="clasifica">
+                            <td>2</td>
+                            <td class="team"><img src="../superlig/escudos/imperio.png">Imperio F.C.</td>
+                            <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+                        </tr>
+                        <tr class="repechaje">
+                            <td>3</td>
+                            <td class="team"><img src="../superlig/escudos/bug.png">Black United City</td>
+                            <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td class="team"><img src="../superlig/escudos/racingvn.png">Racing VN</td>
+                            <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+                        </tr>
+                    </table>
+                </div>
 
-<body>
-<div class="container">
+                <!-- GRUPO C -->
+                <div class="group">
+                    <h2>Grupo C</h2>
+                    <table>
+                        <tr><th>Pos</th><th>Equipo</th><th>PJ</th><th>PG</th><th>PE</th><th>PP</th><th>GF</th><th>GC</th><th>DIF</th><th>PTS</th></tr>
+                        <tr class="clasifica">
+                            <td>1</td>
+                            <td class="team"><img src="../superlig/escudos/realpatapim.png">Real Patapim</td>
+                            <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+                        </tr>
+                        <tr class="clasifica">
+                            <td>2</td>
+                            <td class="team"><img src="../superlig/escudos/sacachispas.png">Sacachispas</td>
+                            <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+                        </tr>
+                        <tr class="repechaje">
+                            <td>3</td>
+                            <td class="team"><img src="../superlig/escudos/nuevachicago.png">Nueva Chicago</td>
+                            <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td class="team"><img src="../superlig/escudos/velez.png">Vélez Sarsfield</td>
+                            <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+                        </tr>
+                    </table>
+                </div>
 
-<div class="header">COPA LIBERTADORES</div>
+                <!-- GRUPO D -->
+                <div class="group">
+                    <h2>Grupo D</h2>
+                    <table>
+                        <tr><th>Pos</th><th>Equipo</th><th>PJ</th><th>PG</th><th>PE</th><th>PP</th><th>GF</th><th>GC</th><th>DIF</th><th>PTS</th></tr>
+                        <tr class="clasifica">
+                            <td>1</td>
+                            <td class="team"><img src="../superlig/escudos/carita.png">Carita F.C.</td>
+                            <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+                        </tr>
+                        <tr class="clasifica">
+                            <td>2</td>
+                            <td class="team"><img src="../superlig/escudos/imperio.png">Imperio F.C.</td>
+                            <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+                        </tr>
+                        <tr class="repechaje">
+                            <td>3</td>
+                            <td class="team"><img src="../superlig/escudos/guris.png">Guris HC</td>
+                            <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td class="team"><img src="../superlig/escudos/racingvn.png">Racing VN</td>
+                            <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
 
-<div class="content">
+        <!-- LEYENDA -->
+        <div class="referencias">
+            <div>
+                <span class="color" style="background:#c6efce;"></span>
+                Clasifica a Cuartos de Final
+            </div>
+            <div>
+                <span class="color" style="background:#cfe8ff;"></span>
+                Juega repechaje de la Copa Sudamericana
+            </div>
+            <div>
+                <span class="color" style="background:transparent;"></span>
+                Eliminado
+            </div>
+        </div>
 
-<!-- Contenedor de grupos alineados -->
-<div class="group-container">
-    <!-- GRUPO A -->
-    <div class="group">
-        <h2>Grupo A</h2>
-        <table>
-        <tr><th>Pos</th><th>Equipo</th><th>PJ</th><th>PG</th><th>PE</th><th>PP</th><th>GF</th><th>GC</th><th>DIF</th><th>PTS</th></tr>
-
-        <tr class="clasifica">
-        <td>1</td>
-        <td class="team"><img src="../superlig/escudos/carita.png">Carita F.C.</td>
-        <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
-        </tr>
-
-        <tr class="clasifica">
-        <td>2</td>
-        <td class="team"><img src="../superlig/escudos/atleticobotella.png">Atlético Botella</td>
-        <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
-        </tr>
-
-        <tr class="repechaje">
-        <td>3</td>
-        <td class="team"><img src="../superlig/escudos/guris.png">Guris HC</td>
-        <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
-        </tr>
-
-        <tr>
-        <td>4</td>
-        <td class="team"><img src="../superlig/escudos/sanjose.png">Atlético San José</td>
-        <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
-        </tr>
-        </table>
+        <div class="footer">SUPERLIG M.A. – Copa Libertadores</div>
     </div>
-
-    <!-- GRUPO B -->
-    <div class="group">
-        <h2>Grupo B</h2>
-        <table>
-        <tr><th>Pos</th><th>Equipo</th><th>PJ</th><th>PG</th><th>PE</th><th>PP</th><th>GF</th><th>GC</th><th>DIF</th><th>PTS</th></tr>
-
-        <tr class="clasifica">
-        <td>1</td>
-        <td class="team"><img src="../superlig/escudos/generalpaz.png">General Paz Juniors</td>
-        <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
-        </tr>
-
-        <tr class="clasifica">
-        <td>2</td>
-        <td class="team"><img src="../superlig/escudos/imperio.png">Imperio F.C.</td>
-        <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
-        </tr>
-
-        <tr class="repechaje">
-        <td>3</td>
-        <td class="team"><img src="../superlig/escudos/bug.png">Black United City</td>
-        <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
-        </tr>
-
-        <tr>
-        <td>4</td>
-        <td class="team"><img src="../superlig/escudos/racingvn.png">Racing VN</td>
-        <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
-        </tr>
-        </table>
-    </div>
-
-    <!-- GRUPO C -->
-    <div class="group">
-        <h2>Grupo C</h2>
-        <table>
-        <tr><th>Pos</th><th>Equipo</th><th>PJ</th><th>PG</th><th>PE</th><th>PP</th><th>GF</th><th>GC</th><th>DIF</th><th>PTS</th></tr>
-
-        <tr class="clasifica">
-        <td>1</td>
-        <td class="team"><img src="../superlig/escudos/realpatapim.png">Real Patapim</td>
-        <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
-        </tr>
-
-        <tr class="clasifica">
-        <td>2</td>
-        <td class="team"><img src="../superlig/escudos/sacachispas.png">Sacachispas</td>
-        <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
-        </tr>
-
-        <tr class="repechaje">
-        <td>3</td>
-        <td class="team"><img src="../superlig/escudos/nuevachicago.png">Nueva Chicago</td>
-        <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
-        </tr>
-
-        <tr>
-        <td>4</td>
-        <td class="team"><img src="../superlig/escudos/velez.png">Vélez Sarsfield</td>
-        <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
-        </tr>
-        </table>
-    </div>
-
-    <!-- GRUPO D -->
-    <div class="group">
-        <h2>Grupo D</h2>
-        <table>
-        <tr><th>Pos</th><th>Equipo</th><th>PJ</th><th>PG</th><th>PE</th><th>PP</th><th>GF</th><th>GC</th><th>DIF</th><th>PTS</th></tr>
-
-        <tr class="clasifica">
-        <td>1</td>
-        <td class="team"><img src="../superlig/escudos/carita.png">Carita F.C.</td>
-        <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
-        </tr>
-
-        <tr class="clasifica">
-        <td>2</td>
-        <td class="team"><img src="../superlig/escudos/imperio.png">Imperio F.C.</td>
-        <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
-        </tr>
-
-        <tr class="repechaje">
-        <td>3</td>
-        <td class="team"><img src="../superlig/escudos/guris.png">Guris HC</td>
-        <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
-        </tr>
-
-        <tr>
-        <td>4</td>
-        <td class="team"><img src="../superlig/escudos/racingvn.png">Racing VN</td>
-        <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
-        </tr>
-        </table>
-    </div>
-</div>
-
-</div>
-
-<!-- LEYENDA -->
-<div class="referencias">
-    <div>
-        <span class="color" style="background:#c6efce;"></span>
-        Clasifica a Cuartos de Final
-    </div>
-    <div>
-        <span class="color" style="background:#cfe8ff;"></span>
-        Juega repechaje de la Copa Sudamericana
-    </div>
-    <div>
-        <span class="color" style="background:transparent;"></span>
-        Eliminado
-    </div>
-</div>
-
-<div class="footer">SUPERLIG M.A. – Copa Libertadores</div>
-</div>
 </body>
 </html>
