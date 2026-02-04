@@ -7,72 +7,97 @@
 <style>
 body{
     margin:0;
-    padding:0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family:Arial, Helvetica, sans-serif;
     background:#e5e5e5;
 }
 
 .container{
-    width:1000px;
+    width:900px;
     margin:20px auto;
     background:#fff;
     border:1px solid #999;
-    position:relative;
 }
 
 .header{
-    text-align:center;
-    padding:10px;
+    background:#d9d9d9;
+    padding:12px;
+    font-size:22px;
     font-weight:bold;
-    font-size:20px;
-    background:#ddd;
+    text-align:center;
     border-bottom:1px solid #999;
 }
 
-/* columnas */
-.bracket{
-    display:flex;
-    justify-content:space-between;
-    padding:30px 20px 50px;
-    position:relative;
-}
-
-.column{
-    width:30%;
-    position:relative;
-}
-
-.center{
-    width:40%;
+/* ===== SUBMENU ===== */
+.submenu{
+    background:#efefef;
+    border-bottom:1px solid #999;
     text-align:center;
 }
 
-/* fases */
-.fase{
+.submenu a{
+    display:inline-block;
+    padding:10px 18px;
+    text-decoration:none;
+    color:#000;
     font-weight:bold;
-    margin-bottom:10px;
+    font-size:14px;
 }
 
+.submenu a:hover{
+    background:#d9d9d9;
+}
+
+/* ===== CONTENIDO ===== */
+.content{
+    padding:25px;
+}
+
+/* ===== BRACKET GENERAL ===== */
+.bracket{
+    display:grid;
+    grid-template-columns: 1.3fr 1fr 1fr 1fr 1.3fr;
+    gap:25px;
+    align-items:center;
+}
+
+/* ===== COLUMNAS ===== */
+.col{
+    display:flex;
+    flex-direction:column;
+    justify-content:space-evenly;
+    height:360px;
+}
+
+.semi{
+    height:220px;
+}
+
+/* ===== FASE ===== */
+.fase{
+    text-align:center;
+    font-weight:bold;
+    margin-bottom:6px;
+}
+
+/* ===== PARTIDOS ===== */
 .match{
     border:1px solid #999;
-    margin-bottom:25px;
+    background:#f9f9f9;
+    padding:6px;
+    position:relative;
 }
 
 .team{
     display:flex;
-    align-items:center;
     justify-content:space-between;
-    padding:4px 6px;
-    border-bottom:1px solid #ccc;
+    align-items:center;
     font-size:14px;
+    padding:3px 0;
 }
 
-.team:last-child{
-    border-bottom:none;
-}
-
-.team.win{
-    background:#c9f3d1;
+.team span{
+    display:flex;
+    align-items:center;
 }
 
 .team img{
@@ -81,51 +106,78 @@ body{
     margin-right:6px;
 }
 
-.name{
-    display:flex;
-    align-items:center;
-}
-
 .score{
     font-weight:bold;
 }
 
-/* semifinal y final */
-.semi, .final{
-    border:1px solid #999;
-    margin:25px auto;
-    width:260px;
+/* ===== CLASIFICADO ===== */
+.clasifica{
+    background:#c6efce;
 }
 
-.copa{
-    width:70px;
-    margin:0 auto 10px;
-    display:block;
-}
-
-/* líneas */
-.line{
+/* ===== LINEAS ===== */
+.q1::after, .q2::after{
+    content:"";
     position:absolute;
-    background:#000;
+    right:-25px;
+    top:50%;
+    width:25px;
+    height:1px;
+    background:#666;
 }
 
-/* cuartos -> semis */
-.l1{ width:40px; height:1px; left:300px; top:155px; }
-.l2{ width:1px; height:70px; left:340px; top:155px; }
-.l3{ width:40px; height:1px; left:340px; top:225px; }
+.q3::before, .q4::before{
+    content:"";
+    position:absolute;
+    left:-25px;
+    top:50%;
+    width:25px;
+    height:1px;
+    background:#666;
+}
 
-.r1{ width:40px; height:1px; right:300px; top:155px; }
-.r2{ width:1px; height:70px; right:340px; top:155px; }
-.r3{ width:40px; height:1px; right:340px; top:225px; }
+.s1::after{
+    content:"";
+    position:absolute;
+    right:-25px;
+    top:50%;
+    width:25px;
+    height:1px;
+    background:#666;
+}
 
-/* semis -> final */
-.sf1{ width:1px; height:40px; left:50%; top:285px; }
-.sf2{ width:80px; height:1px; left:460px; top:325px; }
+.s2::before{
+    content:"";
+    position:absolute;
+    left:-25px;
+    top:50%;
+    width:25px;
+    height:1px;
+    background:#666;
+}
 
+/* ===== FINAL ===== */
+.final-center{
+    text-align:center;
+}
+
+.final-center img{
+    width:80px;
+    margin-bottom:8px;
+}
+
+.final{
+    border:2px solid #999;
+    padding:8px;
+    background:#fff;
+}
+
+/* ===== FOOTER ===== */
 .footer{
+    background:#f2f2f2;
     text-align:center;
     font-size:12px;
-    padding:6px;
+    padding:8px;
     border-top:1px solid #999;
 }
 </style>
@@ -135,119 +187,121 @@ body{
 
 <div class="container">
 
-    <div class="header">Llaves Finales - Torneo</div>
+    <div class="header">COPA LIBERTADORES</div>
 
-    <div class="bracket">
+    <div class="submenu">
+        <a href="../index.html">INICIO</a>
+        <a href="fixture.html">FIXTURE</a>
+    </div>
 
-        <!-- CUARTOS IZQ -->
-        <div class="column">
-            <div class="fase">Cuartos</div>
+    <div class="content">
 
-            <div class="match">
-                <div class="team win">
-                    <div class="name">Equipo 1</div>
-                    <div class="score">2</div>
+        <div class="bracket">
+
+            <!-- CUARTOS IZQUIERDA -->
+            <div class="col">
+                <div class="fase">Cuartos</div>
+
+                <div class="match q1">
+                    <div class="team clasifica">
+                        <span><img src="../escudos/e1.png">Equipo 1</span>
+                        <span class="score">2</span>
+                    </div>
+                    <div class="team">
+                        <span><img src="../escudos/e8.png">Equipo 8</span>
+                        <span class="score">1</span>
+                    </div>
                 </div>
-                <div class="team">
-                    <div class="name">Equipo 8</div>
-                    <div class="score">1</div>
+
+                <div class="match q2">
+                    <div class="team">
+                        <span><img src="../escudos/e4.png">Equipo 4</span>
+                        <span class="score">0</span>
+                    </div>
+                    <div class="team clasifica">
+                        <span><img src="../escudos/e5.png">Equipo 5</span>
+                        <span class="score">1</span>
+                    </div>
                 </div>
             </div>
 
-            <div class="match">
-                <div class="team">
-                    <div class="name">Equipo 4</div>
-                    <div class="score">0</div>
-                </div>
-                <div class="team win">
-                    <div class="name">Equipo 5</div>
-                    <div class="score">1</div>
+            <!-- SEMI IZQUIERDA -->
+            <div class="col semi">
+                <div class="fase">Semifinal</div>
+
+                <div class="match s1">
+                    <div class="team clasifica">
+                        <span>Ganador Q1</span>
+                        <span class="score">3</span>
+                    </div>
+                    <div class="team">
+                        <span>Ganador Q2</span>
+                        <span class="score">2</span>
+                    </div>
                 </div>
             </div>
+
+            <!-- FINAL -->
+            <div class="final-center">
+                <img src="../escudos/libertadores.png" alt="Copa Libertadores">
+
+                <div class="fase">Final</div>
+                <div class="final">
+                    <div class="team">
+                        <span>Finalista Izq.</span>
+                        <span class="score">–</span>
+                    </div>
+                    <div class="team">
+                        <span>Finalista Der.</span>
+                        <span class="score">–</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SEMI DERECHA -->
+            <div class="col semi">
+                <div class="fase">Semifinal</div>
+
+                <div class="match s2">
+                    <div class="team clasifica">
+                        <span>Ganador Q3</span>
+                        <span class="score">1</span>
+                    </div>
+                    <div class="team">
+                        <span>Ganador Q4</span>
+                        <span class="score">0</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CUARTOS DERECHA -->
+            <div class="col">
+                <div class="fase">Cuartos</div>
+
+                <div class="match q3">
+                    <div class="team clasifica">
+                        <span><img src="../escudos/e3.png">Equipo 3</span>
+                        <span class="score">2</span>
+                    </div>
+                    <div class="team">
+                        <span><img src="../escudos/e6.png">Equipo 6</span>
+                        <span class="score">0</span>
+                    </div>
+                </div>
+
+                <div class="match q4">
+                    <div class="team">
+                        <span><img src="../escudos/e2.png">Equipo 2</span>
+                        <span class="score">1</span>
+                    </div>
+                    <div class="team clasifica">
+                        <span><img src="../escudos/e7.png">Equipo 7</span>
+                        <span class="score">2</span>
+                    </div>
+                </div>
+            </div>
+
         </div>
-
-        <!-- CENTRO -->
-        <div class="center">
-
-            <div class="fase">Semifinal</div>
-
-            <div class="semi">
-                <div class="team win">
-                    <div class="name">Ganador Q1</div>
-                    <div class="score">3</div>
-                </div>
-                <div class="team">
-                    <div class="name">Ganador Q2</div>
-                    <div class="score">2</div>
-                </div>
-            </div>
-
-            <div class="semi">
-                <div class="team win">
-                    <div class="name">Ganador Q3</div>
-                    <div class="score">1</div>
-                </div>
-                <div class="team">
-                    <div class="name">Ganador Q4</div>
-                    <div class="score">0</div>
-                </div>
-            </div>
-
-            <img src="../escudos/libertadores.png" class="copa" alt="Copa Libertadores">
-
-            <div class="fase">Final</div>
-
-            <div class="final">
-                <div class="team">
-                    <div class="name">Finalista Izq.</div>
-                    <div class="score">-</div>
-                </div>
-                <div class="team">
-                    <div class="name">Finalista Der.</div>
-                    <div class="score">-</div>
-                </div>
-            </div>
-
-        </div>
-
-        <!-- CUARTOS DER -->
-        <div class="column">
-            <div class="fase">Cuartos</div>
-
-            <div class="match">
-                <div class="team win">
-                    <div class="name">Equipo 3</div>
-                    <div class="score">2</div>
-                </div>
-                <div class="team">
-                    <div class="name">Equipo 6</div>
-                    <div class="score">0</div>
-                </div>
-            </div>
-
-            <div class="match">
-                <div class="team">
-                    <div class="name">Equipo 2</div>
-                    <div class="score">1</div>
-                </div>
-                <div class="team win">
-                    <div class="name">Equipo 7</div>
-                    <div class="score">2</div>
-                </div>
-            </div>
-        </div>
-
-        <!-- líneas -->
-        <div class="line l1"></div>
-        <div class="line l2"></div>
-        <div class="line l3"></div>
-
-        <div class="line r1"></div>
-        <div class="line r2"></div>
-        <div class="line r3"></div>
-
-        <div class="line sf1"></div>
-        <div class="line sf2"></div>
 
     </div>
 
