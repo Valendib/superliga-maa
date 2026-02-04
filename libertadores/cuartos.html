@@ -7,8 +7,7 @@
 <style>
 body{
     margin:0;
-    padding:0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family:Arial, Helvetica, sans-serif;
     background:#e5e5e5;
 }
 
@@ -29,10 +28,10 @@ body{
 }
 
 .content{
-    padding:20px;
+    padding:25px;
 }
 
-/* LLAVES */
+/* GRID GENERAL */
 .bracket{
     display:grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -40,32 +39,40 @@ body{
     align-items:center;
 }
 
+/* COLUMNAS */
 .col{
     display:flex;
     flex-direction:column;
-    justify-content:space-around;
-    height:420px;
+    justify-content:space-between;
+    height:360px;
 }
 
 .fase{
     text-align:center;
     font-weight:bold;
-    margin-bottom:10px;
-    font-size:16px;
+    margin-bottom:8px;
 }
 
+/* PARTIDOS */
 .match{
     border:1px solid #999;
-    padding:6px;
-    margin:8px 0;
     background:#f9f9f9;
+    padding:6px;
+    margin:10px 0;
+    position:relative;
 }
 
 .team{
     display:flex;
     align-items:center;
+    justify-content:space-between;
     font-size:14px;
     padding:3px 0;
+}
+
+.team span{
+    display:flex;
+    align-items:center;
 }
 
 .team img{
@@ -74,31 +81,41 @@ body{
     margin-right:6px;
 }
 
+.score{
+    font-weight:bold;
+}
+
+/* CLASIFICADO */
+.clasifica{
+    background:#c6efce;
+}
+
+/* LINEAS */
+.match::after{
+    content:"";
+    position:absolute;
+    top:50%;
+    right:-20px;
+    width:20px;
+    height:1px;
+    background:#666;
+}
+
 /* COPA */
-.copa{
+.final-center{
     text-align:center;
 }
 
-.copa img{
-    width:80px;
-    height:auto;
-    margin:10px 0;
-}
-
-.vs{
-    font-weight:bold;
-    margin:8px 0;
+.final-center img{
+    width:90px;
+    margin-bottom:10px;
 }
 
 /* FINAL */
 .final{
-    margin-top:30px;
-    text-align:center;
-}
-
-.final .match{
-    display:inline-block;
-    width:300px;
+    border:2px solid #999;
+    background:#fff;
+    padding:8px;
 }
 
 .footer{
@@ -120,68 +137,103 @@ body{
 
         <div class="bracket">
 
-            <!-- CUARTOS -->
+            <!-- IZQUIERDA -->
             <div class="col">
                 <div class="fase">Cuartos</div>
 
                 <div class="match">
-                    <div class="team"><img src="escudos/e1.png">Equipo 1</div>
-                    <div class="team"><img src="escudos/e8.png">Equipo 8</div>
+                    <div class="team clasifica">
+                        <span><img src="escudos/e1.png">Equipo 1</span>
+                        <span class="score">2</span>
+                    </div>
+                    <div class="team">
+                        <span><img src="escudos/e8.png">Equipo 8</span>
+                        <span class="score">1</span>
+                    </div>
                 </div>
 
                 <div class="match">
-                    <div class="team"><img src="escudos/e4.png">Equipo 4</div>
-                    <div class="team"><img src="escudos/e5.png">Equipo 5</div>
+                    <div class="team">
+                        <span><img src="escudos/e4.png">Equipo 4</span>
+                        <span class="score">0</span>
+                    </div>
+                    <div class="team clasifica">
+                        <span><img src="escudos/e5.png">Equipo 5</span>
+                        <span class="score">1</span>
+                    </div>
                 </div>
 
-                <div class="match">
-                    <div class="team"><img src="escudos/e3.png">Equipo 3</div>
-                    <div class="team"><img src="escudos/e6.png">Equipo 6</div>
-                </div>
-
-                <div class="match">
-                    <div class="team"><img src="escudos/e2.png">Equipo 2</div>
-                    <div class="team"><img src="escudos/e7.png">Equipo 7</div>
-                </div>
-            </div>
-
-            <!-- SEMIS + COPA -->
-            <div class="col copa">
                 <div class="fase">Semifinal</div>
 
                 <div class="match">
-                    <div class="team">Ganador 1</div>
-                    <div class="team">Ganador 2</div>
-                </div>
-
-                <div class="vs">VS</div>
-                <img src="copa.png" alt="Copa">
-
-                <div class="match">
-                    <div class="team">Ganador 3</div>
-                    <div class="team">Ganador 4</div>
+                    <div class="team clasifica">
+                        <span>Ganador Q1</span>
+                        <span class="score">3</span>
+                    </div>
+                    <div class="team">
+                        <span>Ganador Q2</span>
+                        <span class="score">2</span>
+                    </div>
                 </div>
             </div>
 
             <!-- FINAL -->
-            <div class="col">
-                <div class="fase">Final</div>
+            <div class="final-center">
+                <img src="copa.png" alt="Copa Libertadores">
 
-                <div class="match">
-                    <div class="team">Finalista 1</div>
-                    <div class="team">Finalista 2</div>
+                <div class="fase">Final</div>
+                <div class="final">
+                    <div class="team">
+                        <span>Finalista Izq.</span>
+                        <span class="score">–</span>
+                    </div>
+                    <div class="team">
+                        <span>Finalista Der.</span>
+                        <span class="score">–</span>
+                    </div>
                 </div>
             </div>
 
-        </div>
+            <!-- DERECHA -->
+            <div class="col">
+                <div class="fase">Cuartos</div>
 
-        <!-- FINAL GRANDE -->
-        <div class="final">
-            <div class="fase">Gran Final</div>
-            <div class="match">
-                <div class="team">Camino Izq.</div>
-                <div class="team">Camino Der.</div>
+                <div class="match">
+                    <div class="team clasifica">
+                        <span><img src="escudos/e3.png">Equipo 3</span>
+                        <span class="score">2</span>
+                    </div>
+                    <div class="team">
+                        <span><img src="escudos/e6.png">Equipo 6</span>
+                        <span class="score">0</span>
+                    </div>
+                </div>
+
+                <div class="match">
+                    <div class="team">
+                        <span><img src="escudos/e2.png">Equipo 2</span>
+                        <span class="score">1</span>
+                    </div>
+                    <div class="team clasifica">
+                        <span><img src="escudos/e7.png">Equipo 7</span>
+                        <span class="score">2</span>
+                    </div>
+                </div>
+
+                <div class="fase">Semifinal</div>
+
+                <div class="match">
+                    <div class="team clasifica">
+                        <span>Ganador Q3</span>
+                        <span class="score">1</span>
+                    </div>
+                    <div class="team">
+                        <span>Ganador Q4</span>
+                        <span class="score">0</span>
+                    </div>
+                </div>
             </div>
+
         </div>
 
     </div>
