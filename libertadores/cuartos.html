@@ -1,264 +1,193 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Cuartos de Final - Torneo</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, Helvetica, sans-serif;
-            background: #e5e5e5;
-        }
+<meta charset="UTF-8">
+<title>Llaves Finales - Torneo</title>
 
-        .container {
-            width: 900px;
-            margin: 20px auto;
-            background: #fff;
-            border: 1px solid #999;
-        }
+<style>
+body{
+    margin:0;
+    padding:0;
+    font-family: Arial, Helvetica, sans-serif;
+    background:#e5e5e5;
+}
 
-        .header {
-            background: #d9d9d9;
-            padding: 10px;
-            font-size: 22px;
-            font-weight: bold;
-            border-bottom: 1px solid #999;
-            text-align: center;
-        }
+.container{
+    width:900px;
+    margin:20px auto;
+    background:#fff;
+    border:1px solid #999;
+}
 
-        .submenu {
-            background: #f2f2f2;
-            padding: 8px;
-            border-bottom: 1px solid #999;
-            font-size: 14px;
-            text-align: center;
-        }
+.header{
+    background:#d9d9d9;
+    padding:12px;
+    font-size:22px;
+    font-weight:bold;
+    text-align:center;
+    border-bottom:1px solid #999;
+}
 
-        .submenu a {
-            margin-right: 15px;
-            text-decoration: none;
-            color: #003399;
-            font-weight: bold;
-        }
+.content{
+    padding:20px;
+}
 
-        .submenu a:hover {
-            text-decoration: underline;
-        }
+/* LLAVES */
+.bracket{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap:30px;
+    align-items:center;
+}
 
-        .content {
-            padding: 15px;
-        }
+.col{
+    display:flex;
+    flex-direction:column;
+    justify-content:space-around;
+    height:420px;
+}
 
-        h2 {
-            font-size: 18px;
-            border-bottom: 1px solid #ccc;
-            padding-bottom: 5px;
-            margin-bottom: 10px;
-        }
+.fase{
+    text-align:center;
+    font-weight:bold;
+    margin-bottom:10px;
+    font-size:16px;
+}
 
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            font-size: 14px;
-            margin-bottom: 25px;
-        }
+.match{
+    border:1px solid #999;
+    padding:6px;
+    margin:8px 0;
+    background:#f9f9f9;
+}
 
-        th, td {
-            border: 1px solid #999;
-            padding: 5px;
-            text-align: center;
-        }
+.team{
+    display:flex;
+    align-items:center;
+    font-size:14px;
+    padding:3px 0;
+}
 
-        th {
-            background: #efefef;
-        }
+.team img{
+    width:18px;
+    height:18px;
+    margin-right:6px;
+}
 
-        td.team {
-            text-align: left;
-        }
+/* COPA */
+.copa{
+    text-align:center;
+}
 
-        .team img {
-            width: 18px;
-            height: 18px;
-            vertical-align: middle;
-            margin-right: 6px;
-        }
+.copa img{
+    width:80px;
+    height:auto;
+    margin:10px 0;
+}
 
-        /* COLORES TABLA */
-        .clasifica {
-            background: #c6efce;
-        }
+.vs{
+    font-weight:bold;
+    margin:8px 0;
+}
 
-        .repechaje {
-            background: #cfe8ff;
-        }
+/* FINAL */
+.final{
+    margin-top:30px;
+    text-align:center;
+}
 
-        /* LEYENDA */
-        .referencias {
-            margin-top: 12px;
-            font-size: 13px;
-        }
+.final .match{
+    display:inline-block;
+    width:300px;
+}
 
-        .referencias div {
-            margin: 4px 0;
-        }
-
-        .color {
-            display: inline-block;
-            width: 12px;
-            height: 12px;
-            margin-right: 6px;
-            border: 1px solid #666;
-        }
-
-        .footer {
-            background: #f2f2f2;
-            text-align: center;
-            font-size: 12px;
-            padding: 8px;
-            border-top: 1px solid #999;
-        }
-
-        .llave {
-            display: flex;
-            justify-content: space-around;
-            margin-bottom: 30px;
-        }
-
-        .lado {
-            width: 40%;
-            text-align: center;
-        }
-
-        .copa {
-            width: 20%;
-            text-align: center;
-            font-size: 30px;
-            position: relative;
-        }
-
-        .copa img {
-            width: 60px;
-            height: 60px;
-        }
-
-        .fase {
-            font-size: 18px;
-            margin-bottom: 10px;
-            font-weight: bold;
-        }
-
-        .enfrentamiento {
-            margin: 10px 0;
-            display: flex;
-            justify-content: space-between;
-        }
-
-        .enfrentamiento img {
-            width: 20px;
-            height: 20px;
-        }
-
-    </style>
+.footer{
+    background:#f2f2f2;
+    text-align:center;
+    font-size:12px;
+    padding:8px;
+    border-top:1px solid #999;
+}
+</style>
 </head>
+
 <body>
 
-    <div class="container">
-        <div class="header">Cuartos de Final - Torneo</div>
+<div class="container">
+    <div class="header">Llaves Finales - Torneo</div>
 
-        <div class="content">
-            <!-- Fase de Cuartos -->
-            <div class="fase">Cuartos de Final</div>
-            <div class="llave">
-                <div class="lado">
-                    <div class="enfrentamiento">
-                        <div class="team"><img src="escudo1.png" alt="Equipo 1">Equipo 1</div>
-                        <div class="team"><img src="escudo8.png" alt="Equipo 8">Equipo 8</div>
-                    </div>
-                    <div class="enfrentamiento">
-                        <div class="team"><img src="escudo4.png" alt="Equipo 4">Equipo 4</div>
-                        <div class="team"><img src="escudo5.png" alt="Equipo 5">Equipo 5</div>
-                    </div>
-                    <div class="enfrentamiento">
-                        <div class="team"><img src="escudo3.png" alt="Equipo 3">Equipo 3</div>
-                        <div class="team"><img src="escudo6.png" alt="Equipo 6">Equipo 6</div>
-                    </div>
-                    <div class="enfrentamiento">
-                        <div class="team"><img src="escudo2.png" alt="Equipo 2">Equipo 2</div>
-                        <div class="team"><img src="escudo7.png" alt="Equipo 7">Equipo 7</div>
-                    </div>
+    <div class="content">
+
+        <div class="bracket">
+
+            <!-- CUARTOS -->
+            <div class="col">
+                <div class="fase">Cuartos</div>
+
+                <div class="match">
+                    <div class="team"><img src="escudos/e1.png">Equipo 1</div>
+                    <div class="team"><img src="escudos/e8.png">Equipo 8</div>
                 </div>
 
-                <!-- Copa en el centro -->
-                <div class="copa">
-                    <div>vs</div>
-                    <img src="copa.png" alt="Copa">
+                <div class="match">
+                    <div class="team"><img src="escudos/e4.png">Equipo 4</div>
+                    <div class="team"><img src="escudos/e5.png">Equipo 5</div>
                 </div>
 
-                <div class="lado">
-                    <div class="enfrentamiento">
-                        <div class="team">Finalista 1</div>
-                        <div class="team">Finalista 2</div>
-                    </div>
-                    <div class="enfrentamiento">
-                        <div class="team">Finalista 3</div>
-                        <div class="team">Finalista 4</div>
-                    </div>
+                <div class="match">
+                    <div class="team"><img src="escudos/e3.png">Equipo 3</div>
+                    <div class="team"><img src="escudos/e6.png">Equipo 6</div>
+                </div>
+
+                <div class="match">
+                    <div class="team"><img src="escudos/e2.png">Equipo 2</div>
+                    <div class="team"><img src="escudos/e7.png">Equipo 7</div>
                 </div>
             </div>
 
-            <!-- Fase de Semifinales -->
-            <div class="fase">Semifinales</div>
-            <div class="llave">
-                <div class="lado">
-                    <div class="enfrentamiento">
-                        <div class="team">Semifinalista 1</div>
-                        <div class="team">Semifinalista 2</div>
-                    </div>
+            <!-- SEMIS + COPA -->
+            <div class="col copa">
+                <div class="fase">Semifinal</div>
+
+                <div class="match">
+                    <div class="team">Ganador 1</div>
+                    <div class="team">Ganador 2</div>
                 </div>
 
-                <!-- Copa en el centro -->
-                <div class="copa">
-                    <div>vs</div>
-                    <img src="copa.png" alt="Copa">
-                </div>
+                <div class="vs">VS</div>
+                <img src="copa.png" alt="Copa">
 
-                <div class="lado">
-                    <div class="enfrentamiento">
-                        <div class="team">Semifinalista 3</div>
-                        <div class="team">Semifinalista 4</div>
-                    </div>
+                <div class="match">
+                    <div class="team">Ganador 3</div>
+                    <div class="team">Ganador 4</div>
                 </div>
             </div>
 
-            <!-- Fase Final -->
-            <div class="fase">Final</div>
-            <div class="llave">
-                <div class="lado">
-                    <div class="enfrentamiento">
-                        <div class="team">Finalista 1</div>
-                        <div class="team">Finalista 2</div>
-                    </div>
-                </div>
+            <!-- FINAL -->
+            <div class="col">
+                <div class="fase">Final</div>
 
-                <!-- Copa en el centro -->
-                <div class="copa">
-                    <div>vs</div>
-                    <img src="copa.png" alt="Copa">
-                </div>
-
-                <div class="lado">
-                    <div class="enfrentamiento">
-                        <div class="team">Finalista 3</div>
-                        <div class="team">Finalista 4</div>
-                    </div>
+                <div class="match">
+                    <div class="team">Finalista 1</div>
+                    <div class="team">Finalista 2</div>
                 </div>
             </div>
 
         </div>
-        <div class="footer">Torneo - Todos los derechos reservados</div>
+
+        <!-- FINAL GRANDE -->
+        <div class="final">
+            <div class="fase">Gran Final</div>
+            <div class="match">
+                <div class="team">Camino Izq.</div>
+                <div class="team">Camino Der.</div>
+            </div>
+        </div>
+
     </div>
+
+    <div class="footer">SUPERLIG M.A. – Torneo Oficial</div>
+</div>
 
 </body>
 </html>
